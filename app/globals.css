@@ -156,18 +156,33 @@ button { color: inherit; }
   z-index: 4;
   right: 47.5%;
   top: 31.8%;
-  width: min(48vw, 720px);
-  height: clamp(150px, 16vw, 240px);
+  width: min(30vw, 330px);
+  height: clamp(100px, 10vw, 140px);
   transform: rotate(2.5deg);
   transform-origin: right center;
   pointer-events: none;
 }
-.fire-canvas { position: absolute; inset: 0; width: 100%; height: 100%; filter: saturate(1.14) contrast(1.08); }
+.fire-canvas { position: absolute; z-index: 3; inset: 0; width: 100%; height: 100%; filter: saturate(1.14) contrast(1.08); }
+.fire-texture {
+  position: absolute;
+  z-index: 1;
+  inset: -34% -28% -34% 10%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  transform-origin: 92% 50%;
+  clip-path: inset(0 0 0 100%);
+  opacity: 0;
+  will-change: transform, opacity, clip-path;
+}
+.fire-texture-main { filter: saturate(1.04) contrast(1.14) brightness(.94) drop-shadow(0 0 8px rgba(255,83,21,.5)); }
+.fire-texture-inner { z-index: 2; filter: saturate(.75) brightness(1.3) contrast(1.12) drop-shadow(0 0 5px rgba(255,190,65,.45)); }
 .mouth-heat {
   position: absolute;
   right: -4.5%;
   top: 30%;
-  width: 17%;
+  width: 11%;
   aspect-ratio: 1.7;
   border-radius: 50%;
   background: radial-gradient(ellipse, rgba(255,250,216,.98), rgba(255,132,43,.75) 22%, rgba(206,45,17,.35) 48%, transparent 72%);
@@ -178,7 +193,7 @@ button { color: inherit; }
 .heat-wake {
   position: absolute;
   z-index: -1;
-  inset: 19% 3% 18% 1%;
+  inset: 24% 3% 22% 32%;
   clip-path: polygon(0 40%, 100% 20%, 100% 78%, 0 58%);
   backdrop-filter: blur(3px) contrast(1.08);
   background: linear-gradient(90deg, transparent, rgba(246,104,39,.035) 35%, rgba(255,211,143,.08));
@@ -186,9 +201,9 @@ button { color: inherit; }
 }
 .ash-cloud {
   position: absolute;
-  left: -4%;
+  left: 13%;
   top: 20%;
-  width: 40%;
+  width: 34%;
   height: 70%;
   border-radius: 50%;
   background: radial-gradient(ellipse, rgba(61,49,45,.3), rgba(31,29,29,.12) 48%, transparent 72%);
@@ -218,6 +233,8 @@ button { color: inherit; }
   opacity: 0;
 }
 .is-breathing .mouth-heat { animation: mouth-ignition 2.25s ease-out both; }
+.is-breathing .fire-texture-main { animation: plume-breathe 2.15s cubic-bezier(.2,.7,.25,1) both; }
+.is-breathing .fire-texture-inner { animation: plume-inner 1.95s .08s cubic-bezier(.2,.7,.25,1) both; }
 .is-breathing .heat-wake { animation: heat-shimmer 2.15s ease both; }
 .is-breathing .ash-cloud { animation: smoke-bloom 2.4s .85s ease-out both; }
 .is-breathing .pressure-ring { animation: pressure-wave .55s .1s cubic-bezier(.1,.65,.2,1) both; }
@@ -225,6 +242,26 @@ button { color: inherit; }
 .is-breathing .fire-button { border-color: rgba(255,105,50,.65); box-shadow: 0 0 30px rgba(217,73,35,.13), inset 0 0 22px rgba(217,73,35,.08); }
 .is-breathing .fire-dot { animation: fire-dot-pulse .28s ease infinite alternate; }
 @keyframes mouth-ignition { 0%{opacity:0;transform:scale(.15)} 7%{opacity:1;transform:scale(.75)} 14%{opacity:.65;transform:scale(.5)} 23%{opacity:1;transform:scale(1.25)} 62%{opacity:.82;transform:scale(.95)} 78%{opacity:.25} 100%{opacity:0;transform:scale(.45)} }
+@keyframes plume-breathe {
+  0% { opacity:0; clip-path:inset(0 0 0 100%); transform:translateX(8%) scale(.08,.35); }
+  9% { opacity:.35; clip-path:inset(0 0 0 82%); transform:translateX(5%) scale(.28,.52); }
+  18% { opacity:.94; clip-path:inset(0 0 0 24%); transform:translateX(1%) scale(.78,.82); }
+  30% { opacity:1; clip-path:inset(0 0 0 8%); transform:translateX(0) scale(.9,1.02) rotate(-.5deg); }
+  43% { opacity:.9; clip-path:inset(0 0 0 13%); transform:translateX(1.5%) scale(.84,.88) rotate(.6deg); }
+  57% { opacity:.98; clip-path:inset(0 0 0 6%); transform:translateX(-1%) scale(.92,1.06) rotate(-.35deg); }
+  72% { opacity:.84; clip-path:inset(0 0 0 18%); transform:translateX(1%) scale(.8,.92) rotate(.4deg); }
+  86% { opacity:.42; clip-path:inset(0 0 0 42%); transform:translateX(4%) scale(.58,.68); }
+  100% { opacity:0; clip-path:inset(0 0 0 88%); transform:translateX(8%) scale(.18,.32); }
+}
+@keyframes plume-inner {
+  0% { opacity:0; clip-path:inset(0 0 0 100%); transform:translateX(9%) scale(.08,.26); }
+  15% { opacity:.68; clip-path:inset(0 0 0 58%); transform:translateX(4%) scale(.48,.48); }
+  28% { opacity:.78; clip-path:inset(0 0 0 22%); transform:translateX(2%) scale(.72,.63) rotate(.7deg); }
+  46% { opacity:.54; clip-path:inset(0 0 0 29%); transform:translateX(3%) scale(.65,.51) rotate(-.8deg); }
+  63% { opacity:.76; clip-path:inset(0 0 0 18%); transform:translateX(1%) scale(.76,.7) rotate(.5deg); }
+  82% { opacity:.35; clip-path:inset(0 0 0 52%); transform:translateX(5%) scale(.45,.42); }
+  100% { opacity:0; clip-path:inset(0 0 0 94%); transform:translateX(9%) scale(.12,.24); }
+}
 @keyframes heat-shimmer { 0%,8%{opacity:0;transform:scaleX(.1)} 20%{opacity:.9;transform:scaleX(.78)} 38%,67%{opacity:.65;transform:scaleX(1)} 100%{opacity:0;transform:scaleX(.7)} }
 @keyframes smoke-bloom { 0%{opacity:0;transform:translateX(80px) scale(.4)} 30%{opacity:.5} 100%{opacity:0;transform:translate(-90px,-35px) scale(1.6)} }
 @keyframes pressure-wave { 0%{opacity:0;transform:translateX(0) scale(.25)} 20%{opacity:.8} 100%{opacity:0;transform:translateX(-270px) scale(3.8)} }

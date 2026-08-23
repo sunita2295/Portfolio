@@ -97,19 +97,23 @@ export default function Portfolio() {
     let previous = started;
     let frame = 0;
 
-    const spawn = (elapsed: number) => {
+    const firePower = (elapsed: number) => {
       const ignition = Math.min(elapsed / 150, 1);
-      const taper = elapsed > 1250 ? Math.max(0, 1 - (elapsed - 1250) / 520) : 1;
-      const count = reducedMotion ? 1 : Math.ceil(3 * ignition * taper);
+      const taper = elapsed > 1180 ? Math.max(0, 1 - (elapsed - 1180) / 420) : 1;
+      return ignition * taper;
+    };
+
+    const spawnAsh = (elapsed: number) => {
+      const power = firePower(elapsed);
+      const count = reducedMotion ? 1 : Math.ceil(2 * power);
 
       for (let index = 0; index < count; index += 1) {
-        const kind: FlameParticle["kind"] = Math.random() > 0.84 ? "smoke" : "ember";
-        const speed = width * (0.35 + Math.random() * 0.28);
+        const kind: FlameParticle["kind"] = Math.random() > 0.88 ? "smoke" : "ember";
         particles.push({
-          x: originX - width * (0.25 + Math.random() * 0.17),
-          y: originY + (Math.random() - 0.5) * height * 0.42,
-          vx: -speed,
-          vy: (Math.random() - 0.62) * height * 0.22,
+          x: originX - 70 - Math.random() * 50,
+          y: originY + (Math.random() - 0.5) * 42,
+          vx: -(95 + Math.random() * 175),
+          vy: (Math.random() - 0.72) * 56,
           radius: kind === "smoke" ? 5 + Math.random() * 8 : 1 + Math.random() * 2.2,
           age: 0,
           life: kind === "smoke" ? 0.65 + Math.random() * 0.65 : 0.5 + Math.random() * 0.75,
@@ -121,8 +125,8 @@ export default function Portfolio() {
 
     const drawParticle = (particle: FlameParticle) => {
       const progress = particle.age / particle.life;
-      const alpha = Math.sin(Math.min(progress, 1) * Math.PI) * (particle.kind === "smoke" ? 0.18 : 0.88);
-      const radius = particle.radius * (0.75 + progress * (particle.kind === "smoke" ? 2.6 : 0.55));
+      const alpha = Math.sin(Math.min(progress, 1) * Math.PI) * (particle.kind === "smoke" ? 0.16 : 0.88);
+      const radius = particle.radius * (0.7 + progress * (particle.kind === "smoke" ? 2.6 : 0.55));
       const palette = {
         ember: ["rgba(255,218,116,.98)", "rgba(255,83,27,.86)", "rgba(136,25,8,0)"],
         smoke: ["rgba(112,72,58,.28)", "rgba(42,35,34,.14)", "rgba(12,12,12,0)"],
@@ -145,103 +149,15 @@ export default function Portfolio() {
       context.restore();
     };
 
-    const drawTongue = (
-      length: number,
-      tongueWidth: number,
-      offset: number,
-      phase: number,
-      colors: [string, string, string, string],
-      alpha: number,
-    ) => {
-      const time = performance.now() / 1000;
-      const tipX = originX - length;
-      const tipY = originY + offset + Math.sin(time * 16 + phase) * tongueWidth * 0.24;
-      const shoulder = Math.sin(time * 11 + phase * 1.7) * tongueWidth * 0.16;
-      const gradient = context.createLinearGradient(tipX, 0, originX, 0);
-      gradient.addColorStop(0, colors[0]);
-      gradient.addColorStop(0.22, colors[1]);
-      gradient.addColorStop(0.66, colors[2]);
-      gradient.addColorStop(1, colors[3]);
-
-      context.save();
-      context.globalCompositeOperation = "lighter";
-      context.globalAlpha = alpha;
-      context.fillStyle = gradient;
-      context.shadowColor = colors[2];
-      context.shadowBlur = tongueWidth * 0.32;
-      context.beginPath();
-      context.moveTo(originX + 4, originY + offset);
-      context.bezierCurveTo(
-        originX - length * 0.18,
-        originY + offset - tongueWidth * 0.62 + shoulder,
-        originX - length * 0.7,
-        tipY - tongueWidth * 0.22,
-        tipX,
-        tipY,
-      );
-      context.bezierCurveTo(
-        originX - length * 0.66,
-        tipY + tongueWidth * 0.25,
-        originX - length * 0.2,
-        originY + offset + tongueWidth * 0.58 - shoulder,
-        originX + 4,
-        originY + offset,
-      );
-      context.closePath();
-      context.fill();
-      context.restore();
-    };
-
-    const drawFlames = (elapsed: number) => {
-      if (elapsed > 1980) return;
-      const ignite = Math.min(elapsed / 190, 1);
-      const fade = elapsed > 1380 ? Math.max(0, 1 - (elapsed - 1380) / 600) : 1;
-      const pulse = 0.92 + Math.sin(elapsed * 0.041) * 0.055 + Math.sin(elapsed * 0.079) * 0.035;
-      const power = ignite * fade;
-      const maxLength = Math.min(width * 0.43, 305) * pulse * power;
-
-      drawTongue(
-        maxLength,
-        height * 0.3 * power,
-        0,
-        0.2,
-        ["rgba(143,22,5,0)", "rgba(224,46,8,.72)", "rgba(255,112,20,.84)", "rgba(255,188,69,.9)"],
-        0.88,
-      );
-      drawTongue(
-        maxLength * 0.8,
-        height * 0.18 * power,
-        -height * 0.055,
-        1.8,
-        ["rgba(205,37,4,0)", "rgba(255,91,8,.78)", "rgba(255,191,54,.94)", "rgba(255,246,198,.98)"],
-        0.96,
-      );
-      drawTongue(
-        maxLength * 0.62,
-        height * 0.11 * power,
-        height * 0.045,
-        3.4,
-        ["rgba(246,69,5,0)", "rgba(255,158,24,.86)", "rgba(255,235,141,.98)", "rgba(255,255,238,1)"],
-        1,
-      );
-      drawTongue(
-        maxLength * 0.48,
-        height * 0.065 * power,
-        -height * 0.12,
-        5.1,
-        ["rgba(197,34,4,0)", "rgba(255,82,8,.7)", "rgba(255,173,35,.86)", "rgba(255,222,121,.9)"],
-        0.76,
-      );
-    };
-
     const animate = (now: number) => {
       const elapsed = now - started;
       const delta = Math.min((now - previous) / 1000, 0.034);
       previous = now;
       context.clearRect(0, 0, width, height);
 
-      drawFlames(elapsed);
-      if (elapsed < 1850) spawn(elapsed);
+      if (elapsed < 1650) {
+        spawnAsh(elapsed);
+      }
       particles.forEach((particle) => {
         particle.age += delta;
         particle.wobble += delta * 13;
@@ -257,7 +173,7 @@ export default function Portfolio() {
       particles.sort((a, b) => (a.kind === "smoke" ? -1 : 1) - (b.kind === "smoke" ? -1 : 1));
       particles.forEach(drawParticle);
 
-      if (elapsed < 2450 || particles.length) frame = window.requestAnimationFrame(animate);
+      if (elapsed < 2250 || particles.length) frame = window.requestAnimationFrame(animate);
       else context.clearRect(0, 0, width, height);
     };
 
@@ -311,6 +227,8 @@ export default function Portfolio() {
         <div className="fire-stage" aria-hidden="true">
           <span className="heat-wake" />
           <span className="ash-cloud" />
+          <img className="fire-texture fire-texture-main" src="/fire-plume-alpha.png" alt="" />
+          <img className="fire-texture fire-texture-inner" src="/fire-plume-alpha.png" alt="" />
           <canvas ref={fireCanvas} className="fire-canvas" />
           <span className="pressure-ring" />
           <span className="mouth-heat" />
