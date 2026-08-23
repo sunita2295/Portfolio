@@ -72,7 +72,7 @@ button { color: inherit; }
   color: #bc9267;
   transition: color .3s ease, filter .3s ease;
 }
-.sigil:hover { color: #ef9a57; filter: drop-shadow(0 0 9px rgba(216,73,38,.35)); }
+.sigil:hover { color: #d4a474; filter: drop-shadow(0 0 7px rgba(188,146,103,.28)); }
 .golden-mark {
   display: block;
   width: 43px;
@@ -80,13 +80,12 @@ button { color: inherit; }
   overflow: visible;
   fill: none;
   stroke: currentColor;
-  stroke-width: 3;
+  stroke-width: 4;
   stroke-linecap: square;
   stroke-linejoin: miter;
   filter: drop-shadow(0 0 6px rgba(0,0,0,.8));
-  transition: transform .35s ease;
+  transition: color .3s ease;
 }
-.sigil:hover .golden-mark { transform: scale(1.045); }
 .nav { display: flex; align-items: center; gap: clamp(26px, 4vw, 64px); }
 .nav a {
   text-transform: uppercase;

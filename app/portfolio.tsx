@@ -83,11 +83,10 @@ export default function Portfolio() {
       <header className="topbar">
         <a className="sigil" href="#top" aria-label="Sunita Rout, home">
           <svg className="golden-mark" viewBox="0 0 100 100" aria-hidden="true">
-            <rect x="3" y="3" width="94" height="94" />
-            <path d="M50 3v94" />
-            <path d="M3 50A47 47 0 0 1 50 3" />
-            <path d="M50 3A47 47 0 0 1 97 50" />
-            <circle cx="50" cy="58" r="23" />
+            <rect x="4" y="4" width="92" height="92" />
+            <path d="M4 27C15 12 31 4 50 4C75.4 4 96 24.6 96 50C96 75.4 75.4 96 50 96" />
+            <circle cx="50" cy="62" r="24" />
+            <path d="M50 4v92" />
           </svg>
         </a>
         <button
