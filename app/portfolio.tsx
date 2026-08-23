@@ -82,7 +82,10 @@ export default function Portfolio() {
       <div className="cursor-aura" aria-hidden="true" />
       <header className="topbar">
         <a className="sigil" href="#top" aria-label="Sunita Rout, home">
-          <span>SR</span>
+          <span className="golden-mark" aria-hidden="true">
+            <i className="ratio-arc ratio-arc-left" />
+            <i className="ratio-arc ratio-arc-sweep" />
+          </span>
         </a>
         <button
           className="menu-button"
