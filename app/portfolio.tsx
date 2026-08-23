@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
@@ -50,6 +50,8 @@ const experience = [
 export default function Portfolio() {
   const [fire, setFire] = useState(false);
   const [menu, setMenu] = useState(false);
+  const fireCanvas = useRef<HTMLCanvasElement>(null);
+  const fireTimer = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const move = (event: PointerEvent) => {
@@ -60,10 +62,130 @@ export default function Portfolio() {
     return () => window.removeEventListener("pointermove", move);
   }, []);
 
+  useEffect(() => {
+    if (!fire || !fireCanvas.current) return;
+
+    const canvas = fireCanvas.current;
+    const rect = canvas.getBoundingClientRect();
+    const width = Math.max(rect.width, 320);
+    const height = Math.max(rect.height, 150);
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = width * pixelRatio;
+    canvas.height = height * pixelRatio;
+
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+    type FlameParticle = {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      radius: number;
+      age: number;
+      life: number;
+      kind: "white" | "gold" | "ember" | "smoke";
+      wobble: number;
+    };
+
+    const particles: FlameParticle[] = [];
+    const originX = width * 0.975;
+    const originY = height * 0.51;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const started = performance.now();
+    let previous = started;
+    let frame = 0;
+
+    const spawn = (elapsed: number) => {
+      const ignition = Math.min(elapsed / 180, 1);
+      const taper = elapsed > 1550 ? Math.max(0, 1 - (elapsed - 1550) / 650) : 1;
+      const count = reducedMotion ? 2 : Math.ceil(10 * ignition * taper);
+
+      for (let index = 0; index < count; index += 1) {
+        const roll = Math.random();
+        const kind: FlameParticle["kind"] = roll > 0.9 ? "smoke" : roll > 0.68 ? "ember" : roll > 0.28 ? "gold" : "white";
+        const speed = width * (0.82 + Math.random() * 0.6);
+        particles.push({
+          x: originX - Math.random() * 14,
+          y: originY + (Math.random() - 0.5) * 15,
+          vx: -speed,
+          vy: (Math.random() - 0.5) * height * 0.42,
+          radius: kind === "smoke" ? 15 + Math.random() * 20 : 8 + Math.random() * 17,
+          age: 0,
+          life: kind === "smoke" ? 0.8 + Math.random() * 0.55 : 0.38 + Math.random() * 0.42,
+          kind,
+          wobble: Math.random() * Math.PI * 2,
+        });
+      }
+    };
+
+    const drawParticle = (particle: FlameParticle) => {
+      const progress = particle.age / particle.life;
+      const alpha = Math.sin(Math.min(progress, 1) * Math.PI) * (particle.kind === "smoke" ? 0.18 : 0.88);
+      const radius = particle.radius * (0.7 + progress * (particle.kind === "smoke" ? 2.2 : 1.15));
+      const palette = {
+        white: ["rgba(255,255,238,.98)", "rgba(255,192,79,.78)", "rgba(255,75,18,0)"],
+        gold: ["rgba(255,226,129,.94)", "rgba(255,116,31,.78)", "rgba(204,35,10,0)"],
+        ember: ["rgba(255,131,40,.9)", "rgba(210,38,10,.65)", "rgba(90,15,8,0)"],
+        smoke: ["rgba(112,72,58,.28)", "rgba(42,35,34,.14)", "rgba(12,12,12,0)"],
+      }[particle.kind];
+
+      context.save();
+      context.globalCompositeOperation = particle.kind === "smoke" ? "source-over" : "lighter";
+      context.globalAlpha = alpha;
+      context.translate(particle.x, particle.y);
+      context.rotate(Math.atan2(particle.vy, particle.vx));
+      context.scale(particle.kind === "smoke" ? 1.7 : 2.8, particle.kind === "smoke" ? 1 : 0.72);
+      const gradient = context.createRadialGradient(0, 0, 0, 0, 0, radius);
+      gradient.addColorStop(0, palette[0]);
+      gradient.addColorStop(0.42, palette[1]);
+      gradient.addColorStop(1, palette[2]);
+      context.fillStyle = gradient;
+      context.beginPath();
+      context.arc(0, 0, radius, 0, Math.PI * 2);
+      context.fill();
+      context.restore();
+    };
+
+    const animate = (now: number) => {
+      const elapsed = now - started;
+      const delta = Math.min((now - previous) / 1000, 0.034);
+      previous = now;
+      context.clearRect(0, 0, width, height);
+
+      if (elapsed < 2200) spawn(elapsed);
+      particles.forEach((particle) => {
+        particle.age += delta;
+        particle.wobble += delta * 13;
+        particle.x += particle.vx * delta;
+        particle.y += particle.vy * delta + Math.sin(particle.wobble) * 1.4;
+        particle.vy -= (particle.kind === "smoke" ? 24 : 10) * delta;
+        particle.vx *= 0.994;
+      });
+
+      for (let index = particles.length - 1; index >= 0; index -= 1) {
+        if (particles[index].age >= particles[index].life || particles[index].x < -80) particles.splice(index, 1);
+      }
+      particles.sort((a, b) => (a.kind === "smoke" ? -1 : 1) - (b.kind === "smoke" ? -1 : 1));
+      particles.forEach(drawParticle);
+
+      if (elapsed < 2750 || particles.length) frame = window.requestAnimationFrame(animate);
+      else context.clearRect(0, 0, width, height);
+    };
+
+    frame = window.requestAnimationFrame(animate);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      context.clearRect(0, 0, width, height);
+    };
+  }, [fire]);
+
   const breatheFire = () => {
+    if (fireTimer.current) window.clearTimeout(fireTimer.current);
     setFire(false);
-    window.requestAnimationFrame(() => setFire(true));
-    window.setTimeout(() => setFire(false), 2800);
+    window.requestAnimationFrame(() => window.requestAnimationFrame(() => setFire(true)));
+    fireTimer.current = window.setTimeout(() => setFire(false), 3200);
   };
 
   return (
@@ -99,11 +221,14 @@ export default function Portfolio() {
         <div className="embers" aria-hidden="true">
           {Array.from({ length: 16 }).map((_, index) => <i key={index} />)}
         </div>
-        <div className="flame" aria-hidden="true">
-          <span className="flame-core" />
-          <span className="flame-glow" />
-          {Array.from({ length: 9 }).map((_, index) => <i key={index} />)}
+        <div className="fire-stage" aria-hidden="true">
+          <span className="heat-wake" />
+          <span className="ash-cloud" />
+          <canvas ref={fireCanvas} className="fire-canvas" />
+          <span className="pressure-ring" />
+          <span className="mouth-heat" />
         </div>
+        <span className="scene-flash" aria-hidden="true" />
 
         <div className="hero-copy">
           <p className="eyebrow">Product designer · Bengaluru</p>
