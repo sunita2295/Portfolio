@@ -64,61 +64,29 @@ button { color: inherit; }
   z-index: 15;
 }
 .sigil {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   position: relative;
   color: #bc9267;
   transition: color .3s ease, filter .3s ease;
 }
-.sigil::before, .sigil::after { content: ""; position: absolute; pointer-events: none; transition: .35s ease; }
-.sigil::before { inset: 4px; border: 1px solid rgba(154,118,87,.2); transform: rotate(45deg); }
-.sigil::after { inset: -2px; border: 1px solid rgba(154,118,87,.14); border-radius: 50%; }
 .sigil:hover { color: #ef9a57; filter: drop-shadow(0 0 9px rgba(216,73,38,.35)); }
-.sigil:hover::before { border-color: rgba(216,73,38,.42); transform: rotate(135deg); }
-.sigil:hover::after { border-color: rgba(188,146,103,.32); transform: scale(1.08); }
 .golden-mark {
-  position: relative;
   display: block;
-  width: 37px;
-  height: 37px;
-  overflow: hidden;
-  border: 1.35px solid currentColor;
-  background: linear-gradient(90deg, transparent calc(50% - .7px), currentColor calc(50% - .7px), currentColor calc(50% + .7px), transparent calc(50% + .7px));
-  box-shadow: inset 0 0 14px rgba(188,146,103,.05), 0 0 12px rgba(0,0,0,.7);
+  width: 43px;
+  height: 43px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,.8));
+  transition: transform .35s ease;
 }
-.golden-mark::after {
-  content: "";
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  left: 50%;
-  top: 54%;
-  border: 1.35px solid currentColor;
-  border-radius: 50%;
-  transform: translate(-50%,-50%);
-}
-.ratio-arc { position: absolute; display: block; pointer-events: none; }
-.ratio-arc-left { left: 0; top: 0; width: 50%; height: 50%; overflow: hidden; }
-.ratio-arc-left::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 36px;
-  height: 36px;
-  border: 1.35px solid currentColor;
-  border-radius: 50%;
-}
-.ratio-arc-sweep {
-  left: 50%;
-  top: -1px;
-  width: 50%;
-  height: calc(100% + 1px);
-  border-top: 1.35px solid currentColor;
-  border-right: 1.35px solid currentColor;
-  border-radius: 0 100% 0 0;
-}
+.sigil:hover .golden-mark { transform: scale(1.045); }
 .nav { display: flex; align-items: center; gap: clamp(26px, 4vw, 64px); }
 .nav a {
   text-transform: uppercase;
@@ -311,6 +279,7 @@ footer a:hover { color:#b24c32; }
 @media (max-width: 900px) {
   .topbar { height: 78px; display:flex; justify-content:space-between; }
   .sigil { width:42px;height:42px; }
+  .golden-mark { width:37px; height:37px; }
   .round-link { display:none; }
   .menu-button { display:flex; width:40px; height:40px; padding:0; border:0; background:transparent; flex-direction:column; justify-content:center; gap:7px; z-index:2; }
   .menu-button span { width:24px; height:1px; background:#bdb4a6; display:block; }
