@@ -7,10 +7,13 @@ const projects = [
     numeral: "I",
     realm: "AI · CONVERSATION INTELLIGENCE",
     title: "U-Discover",
-    intro:
-      "A GenAI-powered discovery experience that turns complex conversations into decisive, human-readable intelligence.",
+    problem:
+      "Enterprise teams had thousands of customer conversations, but finding a reliable answer still meant slow, manual analysis.",
+    solution:
+      "I led discovery and end-to-end UX for a GenAI experience that turned natural-language questions into traceable, decision-ready insight.",
+    proof: "Adopted by Farmers Insurance across 3,000 agents.",
     outcome: "$2.2M",
-    outcomeLabel: "enterprise adoption",
+    outcomeLabel: "enterprise adoption secured",
     detail: "Lead designer · Uniphore · 2023—2026",
     tone: "ember",
   },
@@ -18,10 +21,13 @@ const projects = [
     numeral: "II",
     realm: "B2B · DIGITAL COMMERCE",
     title: "Redington Online",
-    intro:
-      "Reframing discovery, ordering, and checkout for a partner ecosystem where speed, trust, and scale meet.",
-    outcome: "E2E",
-    outcomeLabel: "commerce transformation",
+    problem:
+      "Partners move through fragmented discovery, ordering, checkout, and platform journeys in a high-stakes B2B ecosystem.",
+    solution:
+      "I lead UX strategy across the journey—aligning research, product, engineering, analytics, and AI-assisted commerce into one scalable experience.",
+    proof: "Current transformation · outcome measurement in progress.",
+    outcome: "4",
+    outcomeLabel: "critical journeys connected",
     detail: "UX/UI Design Manager · Redington · 2026—Now",
     tone: "steel",
   },
@@ -29,8 +35,11 @@ const projects = [
     numeral: "III",
     realm: "AI · WORKFLOW AUTOMATION",
     title: "Automation Systems",
-    intro:
-      "Reusable workflows across U-Suite, X-Suite, and Model Space designed to make sophisticated AI feel natural.",
+    problem:
+      "AI workflows were being solved as one-offs, slowing releases and creating inconsistency across the product suite.",
+    solution:
+      "I designed reusable automation patterns across U-Suite, X-Suite, and Model Space—giving teams a system they could configure, ship, and scale.",
+    proof: "+35% retention · +37% conversion · 38% lower churn.",
     outcome: "60%",
     outcomeLabel: "faster rollout cycles",
     detail: "Product Designer · Uniphore · 2023—2026",
@@ -105,10 +114,10 @@ export default function Portfolio() {
           {Array.from({ length: 16 }).map((_, index) => <i key={index} />)}
         </div>
         <div className="hero-copy">
-          <p className="eyebrow">Product designer · Bengaluru</p>
+          <p className="eyebrow">Product designer · AI, SaaS &amp; B2B commerce</p>
           <h1>Sunita<br /><em>Rout</em></h1>
           <p className="hero-deck">
-            I turn complex systems into clear experiences—shaping AI, commerce, and enterprise products people trust.
+            I find where complex products lose people, redesign the system—not just the screen—and prove the difference in adoption, speed, conversion, and retention.
           </p>
           <div className="hero-actions">
             <a className="text-link" href="#work">Enter the work <span>↓</span></a>
@@ -117,25 +126,25 @@ export default function Portfolio() {
             </button>
           </div>
         </div>
-        <p className="side-note">6+ years · 6 industries · one human-centred practice</p>
+        <p className="side-note">6+ years · research to strategy · systems to shipped experience</p>
         <div className="scroll-mark" aria-hidden="true"><span>Scroll</span><i /></div>
       </section>
 
       <section className="signal-strip" aria-label="Career highlights">
-        <p>Designing for humans <span>✦</span> Building for what comes next</p>
+        <p>Research-led decisions <span>✦</span> Outcomes over theatre</p>
         <div className="signals">
-          <div><strong>50%</strong><span>adoption lift</span></div>
+          <div><strong>$2.2M</strong><span>enterprise adoption</span></div>
+          <div><strong>50%</strong><span>higher adoption</span></div>
           <div><strong>60%</strong><span>faster rollouts</span></div>
-          <div><strong>35%</strong><span>retention growth</span></div>
-          <div><strong>6+</strong><span>years crafting products</span></div>
+          <div><strong>38%</strong><span>lower churn</span></div>
         </div>
       </section>
 
       <section className="work-section" id="work">
         <div className="section-heading">
-          <p className="eyebrow">Selected work · forged in complexity</p>
-          <h2>Three realms.<br /><em>One design practice.</em></h2>
-          <p>Case-study narratives are being shaped. For now, explore the impact, intent, and terrain behind the work.</p>
+          <p className="eyebrow">Selected work · evidence included</p>
+          <h2>The problem is the brief.<br /><em>The outcome is the proof.</em></h2>
+          <p>Three systems made easier to understand, faster to use, and more valuable to the business.</p>
         </div>
         <div className="project-list">
           {projects.map((project) => (
@@ -144,7 +153,11 @@ export default function Portfolio() {
               <div className="project-main">
                 <p className="project-realm">{project.realm}</p>
                 <h3>{project.title}</h3>
-                <p>{project.intro}</p>
+                <div className="project-story">
+                  <p><span>Problem</span>{project.problem}</p>
+                  <p><span>Design move</span>{project.solution}</p>
+                </div>
+                <p className="project-proof"><span>Proof</span>{project.proof}</p>
                 <span className="project-detail">{project.detail}</span>
               </div>
               <div className="project-outcome">
@@ -159,24 +172,25 @@ export default function Portfolio() {
 
       <section className="about-section" id="about">
         <div className="orbital-mark" aria-hidden="true"><span>✦</span></div>
-        <div className="about-kicker"><span>About the practice</span></div>
+        <div className="about-kicker"><span>How I create leverage</span></div>
         <div className="about-copy">
-          <p className="pull-quote">I turn complex product problems into clear, useful experiences.</p>
+          <p className="pull-quote">I design the system behind the screen—then make the screen feel obvious.</p>
           <p>
-            I’m a product designer working where human needs, business systems, and emerging technology collide. My practice spans research, strategy, interaction, and visual craft—from the first unanswered question to the shipped experience.
+            My edge is range: research to strategy, information architecture to interaction, service blueprints to design systems. I work across users, product, engineering, analytics, and business to find the root constraint, shape a testable direction, and build patterns teams can scale.
           </p>
         </div>
         <div className="principles">
-          <div><span>01</span><strong>Find the truth</strong><p>Research the real workflow, not the imagined one.</p></div>
-          <div><span>02</span><strong>Make it legible</strong><p>Turn system depth into calm, decisive moments.</p></div>
-          <div><span>03</span><strong>Build to endure</strong><p>Create patterns that teams can scale with confidence.</p></div>
+          <div><span>01 · RESEARCH</span><strong>Diagnose the constraint</strong><p>Use field research, data, journey mapping, and testing to find the failure behind the symptom.</p></div>
+          <div><span>02 · STRATEGY</span><strong>Design the whole system</strong><p>Connect user needs, business rules, information architecture, and interaction into one coherent model.</p></div>
+          <div><span>03 · DELIVERY</span><strong>Prove what moved</strong><p>Ship reusable patterns, measure behavior, and turn design quality into adoption, speed, and growth.</p></div>
         </div>
       </section>
 
       <section className="experience-section" id="experience">
         <div className="section-heading compact">
-          <p className="eyebrow">The journey</p>
-          <h2>Experience,<br /><em>tempered by range.</em></h2>
+          <p className="eyebrow">Six industries · one repeatable advantage</p>
+          <h2>Range built<br /><em>the judgement.</em></h2>
+          <p>AI, commerce, video analytics, insurance, logistics, and enterprise tools taught me to separate surface friction from system failure.</p>
         </div>
         <div className="timeline">
           {experience.map(([date, company, role, field], index) => (
@@ -192,10 +206,10 @@ export default function Portfolio() {
 
       <section className="contact-section" id="contact">
         <div className="contact-glow" aria-hidden="true" />
-        <p className="eyebrow">A new chapter</p>
-        <h2>Have a complex problem<br />worth <em>taming?</em></h2>
-        <p>Let’s create something clear, useful, and built to last.</p>
-        <a className="contact-button" href="mailto:rout.sunita2295@gmail.com">Begin a conversation <span>↗</span></a>
+        <p className="eyebrow">What are you trying to move?</p>
+        <h2>Bring me the product problem<br />hiding inside the <em>business problem.</em></h2>
+        <p>Especially when the workflow is complex, the stakes are high, and “make it simpler” is not enough of a brief.</p>
+        <a className="contact-button" href="mailto:rout.sunita2295@gmail.com">Talk through the problem <span>↗</span></a>
         <div className="contact-meta">
           <span>Bengaluru, India</span>
           <a href="https://www.linkedin.com/in/sunita-rout/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
@@ -205,7 +219,7 @@ export default function Portfolio() {
 
       <footer>
         <span>© 2026 Sunita Rout</span>
-        <span>Product designer · storyteller · systems thinker</span>
+        <span>Research · strategy · interaction · systems</span>
         <a href="#top">Return to the skies ↑</a>
       </footer>
     </main>

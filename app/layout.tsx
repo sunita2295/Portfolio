@@ -11,17 +11,17 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(origin),
     title: "Sunita Rout — Product Designer",
-    description: "Product designer crafting clear, human experiences across AI, SaaS, and enterprise systems.",
+    description: "Product designer turning complex AI, SaaS, and B2B systems into measurable gains in adoption, speed, conversion, and retention.",
     openGraph: {
       title: "Sunita Rout — Product Designer",
-      description: "Human-centred product design across AI, SaaS, commerce, and complex enterprise systems.",
+      description: "Complex product problems. Clear design systems. Measurable outcomes across AI, SaaS, and B2B commerce.",
       type: "website",
       images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "Sunita Rout — Product Designer" }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Sunita Rout — Product Designer",
-      description: "Human-centred product design across AI, SaaS, commerce, and complex enterprise systems.",
+      description: "Complex product problems. Clear design systems. Measurable outcomes across AI, SaaS, and B2B commerce.",
       images: [`${origin}/og.png`],
     },
   };

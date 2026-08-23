@@ -196,7 +196,7 @@ button { color: inherit; }
 .section-heading h2, .contact-section h2 { font-size: clamp(55px, 6.3vw, 96px); line-height: .96; }
 .section-heading > p:last-child { color: #817d76; line-height: 1.7; font-size: 14px; max-width: 320px; margin: 0; }
 .project-list { max-width: 1200px; margin: auto; border-top: 1px solid var(--line); }
-.project-card { position: relative; min-height: 225px; padding: 34px 60px 34px 0; display: grid; grid-template-columns: 120px minmax(0,1fr) 220px; align-items: center; border-bottom: 1px solid var(--line); overflow: hidden; transition: padding .4s ease, background .4s ease; outline: none; }
+.project-card { position: relative; min-height: 330px; padding: 42px 60px 42px 0; display: grid; grid-template-columns: 120px minmax(0,1fr) 220px; align-items: center; border-bottom: 1px solid var(--line); overflow: hidden; transition: padding .4s ease, background .4s ease; outline: none; }
 .project-card::before { content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .4s ease; background: radial-gradient(circle at 82% 50%, rgba(186,57,26,.25), transparent 35%), linear-gradient(90deg, transparent, rgba(255,255,255,.025)); }
 .project-card.steel::before { background: radial-gradient(circle at 82% 50%, rgba(107,117,124,.18), transparent 35%); }
 .project-card.ash::before { background: radial-gradient(circle at 82% 50%, rgba(122,79,51,.2), transparent 35%); }
@@ -206,7 +206,11 @@ button { color: inherit; }
 .project-main { position: relative; }
 .project-realm { color: #b45035 !important; text-transform: uppercase; letter-spacing: .27em; font-size: 8px !important; margin: 0 0 12px !important; }
 .project-main h3 { font: 400 clamp(42px, 4vw, 63px)/1 Iowan Old Style, Baskerville, serif; letter-spacing: -.03em; margin: 0 0 15px; color: #d4ccbd; }
-.project-main > p { margin: 0; max-width: 650px; color: #8c8780; font-size: 14px; line-height: 1.65; }
+.project-story { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 760px; }
+.project-story p, .project-proof { margin: 0; color: #8c8780; font-size: 13px; line-height: 1.65; }
+.project-story span, .project-proof span { display: block; margin-bottom: 6px; color: #b45035; text-transform: uppercase; letter-spacing: .22em; font-size: 8px; font-weight: 650; }
+.project-proof { margin-top: 17px; color: #b5aa9c; }
+.project-proof span { display: inline; margin-right: 12px; }
 .project-detail { display: inline-block; margin-top: 18px; text-transform: uppercase; letter-spacing: .18em; font-size: 8px; color: #625f5a; }
 .project-outcome { position: relative; justify-self: end; display: flex; flex-direction: column; width: 150px; }
 .project-outcome strong { font: 400 42px/1 Iowan Old Style, Baskerville, serif; color: #b6a68f; }
@@ -233,6 +237,7 @@ button { color: inherit; }
 .experience-section { padding: 140px clamp(28px, 7vw, 120px); background: radial-gradient(circle at 20% 45%, rgba(105,42,27,.1), transparent 25%), #08090a; }
 .section-heading.compact { display: block; margin-bottom: 70px; }
 .section-heading.compact h2 { max-width: 700px; }
+.section-heading.compact > p:last-child { max-width: 610px; margin-top: 28px; }
 .timeline { max-width: 1200px; margin: auto; border-top: 1px solid var(--line); }
 .timeline-row { min-height: 110px; display: grid; grid-template-columns: 140px 70px 1fr 1fr; align-items: center; border-bottom: 1px solid var(--line); transition: .3s ease; }
 .timeline-row:hover { background: linear-gradient(90deg, transparent, rgba(255,255,255,.025)); }
@@ -283,6 +288,7 @@ footer a:hover { color:#b24c32; }
   .section-heading { grid-template-columns:1fr; gap:22px; }
   .section-heading h2 { grid-row:2; }
   .project-card { grid-template-columns:62px 1fr; padding:30px 0; }
+  .project-story { grid-template-columns:1fr; gap:16px; }
   .project-outcome { grid-column:2; justify-self:start; width:auto; margin-top:30px; }
   .project-outcome strong { font-size:32px; }
   .about-section { grid-template-columns:1fr; gap:35px; }
