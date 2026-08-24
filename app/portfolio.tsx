@@ -171,28 +171,27 @@ export default function Portfolio() {
       </section>
 
       <section className="about-section" id="about">
-        <div className="orbital-mark" aria-hidden="true"><span>✦</span></div>
         <div className="about-kicker"><span>How I create leverage</span></div>
-        <div className="about-copy">
-          <p className="pull-quote">I design the system behind the screen—then make the screen feel obvious.</p>
-          <p className="about-intro">
-            My edge is range: research to strategy, information architecture to interaction, service blueprints to design systems. I work across users, product, engineering, analytics, and business to find the root constraint, shape a testable direction, and build patterns teams can scale.
-          </p>
-          <aside className="dragon-fact">
-            <div>
-              <span>Fun fact · Why the dragons?</span>
-              <p>No elaborate design metaphor—I’m simply a dragon fan. House of the Dragon inspired this visual world; the product thinking is entirely mine.</p>
-            </div>
-            <div className="ai-credit">
-              <span>Built from scratch · Directed with AI</span>
-              <p>I conceived the visual world, designed the system, and shaped every interaction—using AI as a creative and technical collaborator to take the portfolio from blank canvas to live experience.</p>
-            </div>
+        <div className="about-stage">
+          <div className="about-copy">
+            <p className="pull-quote">Research the truth.<br />Design the system.<br />Prove the outcome.</p>
+            <p className="about-intro">I connect user evidence, product strategy, and scalable interaction patterns—then measure what changed.</p>
+          </div>
+          <div className="method-orbit" aria-hidden="true">
+            <div className="orbit-core"><span>Design</span><strong>Leverage</strong></div>
+            <span className="orbit-label orbit-research">Research</span>
+            <span className="orbit-label orbit-systems">Systems</span>
+            <span className="orbit-label orbit-outcomes">Outcomes</span>
+          </div>
+          <div className="principles">
+            <div><i aria-hidden="true">◉</i><span>01 · RESEARCH</span><strong>Find the constraint</strong></div>
+            <div><i aria-hidden="true">◇</i><span>02 · SYSTEMS</span><strong>Make complexity legible</strong></div>
+            <div><i aria-hidden="true">↗</i><span>03 · OUTCOMES</span><strong>Prove what moved</strong></div>
+          </div>
+          <aside className="lore-strip">
+            <span>Dragon fan · HOTD-inspired</span>
+            <p>Conceived from scratch and built with AI as my creative collaborator—from blank canvas to live experience.</p>
           </aside>
-        </div>
-        <div className="principles">
-          <div><span>01 · RESEARCH</span><strong>Diagnose the constraint</strong><p>Use field research, data, journey mapping, and testing to find the failure behind the symptom.</p></div>
-          <div><span>02 · STRATEGY</span><strong>Design the whole system</strong><p>Connect user needs, business rules, information architecture, and interaction into one coherent model.</p></div>
-          <div><span>03 · DELIVERY</span><strong>Prove what moved</strong><p>Ship reusable patterns, measure behavior, and turn design quality into adoption, speed, and growth.</p></div>
         </div>
       </section>
 
