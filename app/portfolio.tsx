@@ -180,9 +180,13 @@ export default function Portfolio() {
         <div className="about-kicker"><span>How I create leverage</span></div>
         <div className="about-copy">
           <p className="pull-quote">I design the system behind the screen—then make the screen feel obvious.</p>
-          <p>
+          <p className="about-intro">
             My edge is range: research to strategy, information architecture to interaction, service blueprints to design systems. I work across users, product, engineering, analytics, and business to find the root constraint, shape a testable direction, and build patterns teams can scale.
           </p>
+          <aside className="dragon-fact">
+            <span>Fun fact · Why the dragons?</span>
+            <p>No elaborate design metaphor—I’m simply a dragon fan. House of the Dragon inspired this visual world; the product thinking is entirely mine.</p>
+          </aside>
         </div>
         <div className="principles">
           <div><span>01 · RESEARCH</span><strong>Diagnose the constraint</strong><p>Use field research, data, journey mapping, and testing to find the failure behind the symptom.</p></div>

@@ -235,7 +235,10 @@ button { color: inherit; }
 .about-kicker { padding-top: 12px; text-transform: uppercase; letter-spacing: .35em; font-size: 9px; color: #bd4e31; }
 .about-copy { max-width: 940px; }
 .pull-quote { max-width: 900px; margin: 0 0 38px; font: 400 clamp(43px, 5vw, 79px)/1.05 Iowan Old Style, Baskerville, serif; letter-spacing: -.04em; color: #cec5b6; }
-.about-copy > p:last-child { max-width: 720px; font-size: 17px; line-height: 1.8; color: #8d8880; }
+.about-intro { max-width: 720px; font-size: 17px; line-height: 1.8; color: #8d8880; }
+.dragon-fact { max-width: 720px; margin-top: 38px; padding: 20px 24px 20px 27px; border-left: 1px solid #9d4b33; background: linear-gradient(90deg, rgba(135,49,28,.11), transparent); }
+.dragon-fact span { display: block; margin-bottom: 8px; color: #bd5a3b; text-transform: uppercase; letter-spacing: .25em; font-size: 8px; font-weight: 650; }
+.dragon-fact p { margin: 0; color: #928b81; font: 400 15px/1.7 Iowan Old Style, Baskerville, Georgia, serif; }
 .principles { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 50px; border-top: 1px solid var(--line); }
 .principles div { padding: 30px 32px 0 0; border-right: 1px solid var(--line); min-height: 150px; }
 .principles div:not(:first-child) { padding-left: 32px; }
