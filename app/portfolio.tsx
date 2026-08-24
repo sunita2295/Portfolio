@@ -25,6 +25,7 @@ const projects = [
     outcome: "4",
     outcomeLabel: "critical journeys connected",
     tone: "steel",
+    href: "/work/redington-online",
   },
   {
     numeral: "III",
@@ -36,6 +37,7 @@ const projects = [
     outcome: "60%",
     outcomeLabel: "faster rollout cycles",
     tone: "ash",
+    href: "/work/automation-systems",
   },
 ];
 
