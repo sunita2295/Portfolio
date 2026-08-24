@@ -216,7 +216,7 @@ export default function Portfolio() {
       <section className="contact-section" id="contact">
         <div className="contact-glow" aria-hidden="true" />
         <p className="eyebrow">What are you trying to move?</p>
-        <h2>Bring me the business problem.<br />I’ll find the <em>product problem worth solving.</em></h2>
+        <h2>Bring me the business problem.<br />I’ll find <em>what the product must solve.</em></h2>
         <p>Especially when the workflow is complex, the stakes are high, and “make it simpler” is not enough of a brief.</p>
         <a className="contact-button" href="mailto:rout.sunita2295@gmail.com">Talk through the problem <span>↗</span></a>
         <div className="contact-meta">
