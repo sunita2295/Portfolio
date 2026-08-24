@@ -13,6 +13,7 @@ const projects = [
     outcome: "$2.2M",
     outcomeLabel: "enterprise adoption secured",
     tone: "ember",
+    href: "/work/u-discover",
   },
   {
     numeral: "II",
@@ -144,7 +145,7 @@ export default function Portfolio() {
         </div>
         <div className="project-list">
           {projects.map((project, index) => (
-            <article className={`project-card ${project.tone}`} key={project.title} tabIndex={0}>
+            <article className={`project-card ${project.tone}`} key={project.title} tabIndex={project.href ? -1 : 0}>
               <div className="project-visual" aria-hidden="true">
                 <span className={`project-crest crest-${index + 1}`} />
               </div>
@@ -164,6 +165,7 @@ export default function Portfolio() {
                 <strong>{project.outcome}</strong>
                 <span>{project.outcomeLabel}</span>
               </div>
+              {project.href && <a className="project-card-link" href={project.href} aria-label={`Read the ${project.title} case study`} />}
               <span className="project-arrow" aria-hidden="true">↗</span>
             </article>
           ))}
