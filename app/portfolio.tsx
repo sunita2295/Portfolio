@@ -7,42 +7,33 @@ const projects = [
     numeral: "I",
     realm: "AI · CONVERSATION INTELLIGENCE",
     title: "U-Discover",
-    problem:
-      "Enterprise teams had thousands of customer conversations, but finding a reliable answer still meant slow, manual analysis.",
-    solution:
-      "I led discovery and end-to-end UX for a GenAI experience that turned natural-language questions into traceable, decision-ready insight.",
-    proof: "Adopted by Farmers Insurance across 3,000 agents.",
+    problem: "Thousands of conversations. No fast path to a trusted answer.",
+    solution: "Led a GenAI discovery experience from research to release.",
+    proof: "Farmers Insurance · 3,000 agents",
     outcome: "$2.2M",
     outcomeLabel: "enterprise adoption secured",
-    detail: "Lead designer · Uniphore · 2023—2026",
     tone: "ember",
   },
   {
     numeral: "II",
     realm: "B2B · DIGITAL COMMERCE",
     title: "Redington Online",
-    problem:
-      "Partners move through fragmented discovery, ordering, checkout, and platform journeys in a high-stakes B2B ecosystem.",
-    solution:
-      "I lead UX strategy across the journey—aligning research, product, engineering, analytics, and AI-assisted commerce into one scalable experience.",
-    proof: "Current transformation · outcome measurement in progress.",
+    problem: "Four disconnected partner journeys across a high-stakes B2B platform.",
+    solution: "Leading one research-led system from discovery through checkout.",
+    proof: "Transformation in progress",
     outcome: "4",
     outcomeLabel: "critical journeys connected",
-    detail: "UX/UI Design Manager · Redington · 2026—Now",
     tone: "steel",
   },
   {
     numeral: "III",
     realm: "AI · WORKFLOW AUTOMATION",
     title: "Automation Systems",
-    problem:
-      "AI workflows were being solved as one-offs, slowing releases and creating inconsistency across the product suite.",
-    solution:
-      "I designed reusable automation patterns across U-Suite, X-Suite, and Model Space—giving teams a system they could configure, ship, and scale.",
-    proof: "+35% retention · +37% conversion · 38% lower churn.",
+    problem: "One-off AI workflows slowed every release.",
+    solution: "Built reusable patterns across three AI product suites.",
+    proof: "+35% retention · +37% conversion · 38% lower churn",
     outcome: "60%",
     outcomeLabel: "faster rollout cycles",
-    detail: "Product Designer · Uniphore · 2023—2026",
     tone: "ash",
   },
 ];
@@ -152,9 +143,12 @@ export default function Portfolio() {
           <p>Three systems made easier to understand, faster to use, and more valuable to the business.</p>
         </div>
         <div className="project-list">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <article className={`project-card ${project.tone}`} key={project.title} tabIndex={0}>
-              <div className="project-number">{project.numeral}</div>
+              <div className="project-visual" aria-hidden="true">
+                <span className="project-number">{project.numeral}</span>
+                <span className={`project-crest crest-${index + 1}`} />
+              </div>
               <div className="project-main">
                 <p className="project-realm">{project.realm}</p>
                 <h3>{project.title}</h3>
@@ -163,7 +157,6 @@ export default function Portfolio() {
                   <p><span>Design move</span>{project.solution}</p>
                 </div>
                 <p className="project-proof"><span>Proof</span>{project.proof}</p>
-                <span className="project-detail">{project.detail}</span>
               </div>
               <div className="project-outcome">
                 <strong>{project.outcome}</strong>
