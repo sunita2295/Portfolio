@@ -136,7 +136,7 @@ export default function Portfolio() {
       </section>
 
       <section className="signal-strip" aria-label="Career highlights">
-        <p>Research-led decisions <span>✦</span> Outcomes over theatre</p>
+        <p><strong>Research-led decisions</strong><span>✦</span><strong>Outcomes over theatre</strong></p>
         <div className="signals">
           <div><strong>$2.2M</strong><span>enterprise adoption</span></div>
           <div><strong>50%</strong><span>higher adoption</span></div>

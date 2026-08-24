@@ -191,8 +191,9 @@ button { color: inherit; }
 @keyframes fire-dot-pulse { to { transform:scale(1.55);box-shadow:0 0 17px 4px rgba(255,86,31,.52); } }
 
 .signal-strip { border-bottom: 1px solid var(--line); background: #090a0b; padding: 42px clamp(28px, 7vw, 120px) 46px; }
-.signal-strip > p { text-align: center; text-transform: uppercase; letter-spacing: .43em; font-size: 8px; color: #6d6861; margin: 0 0 36px; }
-.signal-strip > p span { color: var(--ember); padding: 0 12px; }
+.signal-strip > p { display: flex; align-items: center; justify-content: center; gap: clamp(16px, 2.2vw, 34px); text-align: center; text-transform: uppercase; letter-spacing: .32em; font-size: clamp(10px, .85vw, 13px); color: #c3b9aa; margin: 0 0 40px; }
+.signal-strip > p strong { font-weight: 560; text-shadow: 0 0 24px rgba(188,146,103,.12); }
+.signal-strip > p span { color: #db603d; padding: 0; font-size: 11px; text-shadow: 0 0 12px rgba(216,73,38,.48); }
 .signals { max-width: 1120px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); }
 .signals div { min-height: 78px; border-left: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .signals div:last-child { border-right: 1px solid var(--line); }
@@ -322,7 +323,7 @@ footer a:hover { color:#b24c32; }
   .hero-actions { gap:14px; align-items:flex-start; flex-direction:column; }
   .fire-button { margin-top:2px; }
   .signal-strip { padding-inline:20px; }
-  .signal-strip > p { line-height:1.8; }
+  .signal-strip > p { flex-direction:column; gap:7px; line-height:1.8; letter-spacing:.25em; }
   .signals strong { font-size:34px; }
   .signals span { letter-spacing:.16em; text-align:center; }
   .work-section,.experience-section { padding-block:95px; }
