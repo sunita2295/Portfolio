@@ -184,8 +184,14 @@ export default function Portfolio() {
             My edge is range: research to strategy, information architecture to interaction, service blueprints to design systems. I work across users, product, engineering, analytics, and business to find the root constraint, shape a testable direction, and build patterns teams can scale.
           </p>
           <aside className="dragon-fact">
-            <span>Fun fact · Why the dragons?</span>
-            <p>No elaborate design metaphor—I’m simply a dragon fan. House of the Dragon inspired this visual world; the product thinking is entirely mine.</p>
+            <div>
+              <span>Fun fact · Why the dragons?</span>
+              <p>No elaborate design metaphor—I’m simply a dragon fan. House of the Dragon inspired this visual world; the product thinking is entirely mine.</p>
+            </div>
+            <div className="ai-credit">
+              <span>Built from scratch · Directed with AI</span>
+              <p>I conceived the visual world, designed the system, and shaped every interaction—using AI as a creative and technical collaborator to take the portfolio from blank canvas to live experience.</p>
+            </div>
           </aside>
         </div>
         <div className="principles">

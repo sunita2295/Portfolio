@@ -237,8 +237,10 @@ button { color: inherit; }
 .about-copy { max-width: 940px; }
 .pull-quote { max-width: 900px; margin: 0 0 38px; font: 400 clamp(43px, 5vw, 79px)/1.05 Iowan Old Style, Baskerville, serif; letter-spacing: -.04em; color: #cec5b6; }
 .about-intro { max-width: 720px; font-size: 17px; line-height: 1.8; color: #8d8880; }
-.dragon-fact { max-width: 720px; margin-top: 38px; padding: 20px 24px 20px 27px; border-left: 1px solid #9d4b33; background: linear-gradient(90deg, rgba(135,49,28,.11), transparent); }
+.dragon-fact { max-width: 880px; margin-top: 38px; padding: 22px 26px 22px 28px; display: grid; grid-template-columns: .9fr 1.35fr; gap: 26px; border-left: 1px solid #9d4b33; background: linear-gradient(90deg, rgba(135,49,28,.11), transparent); }
+.dragon-fact > div + div { padding-left: 26px; border-left: 1px solid rgba(217,209,194,.12); }
 .dragon-fact span { display: block; margin-bottom: 8px; color: #bd5a3b; text-transform: uppercase; letter-spacing: .25em; font-size: 8px; font-weight: 650; }
+.dragon-fact .ai-credit span { color: #c69a6e; }
 .dragon-fact p { margin: 0; color: #928b81; font: 400 15px/1.7 Iowan Old Style, Baskerville, Georgia, serif; }
 .principles { grid-column: 2; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 50px; border-top: 1px solid var(--line); }
 .principles div { padding: 30px 32px 0 0; border-right: 1px solid var(--line); min-height: 150px; }
@@ -307,6 +309,8 @@ footer a:hover { color:#b24c32; }
   .project-outcome strong { font-size:32px; }
   .about-section { grid-template-columns:1fr; gap:35px; }
   .about-copy { grid-row:2; }
+  .dragon-fact { grid-template-columns:1fr; }
+  .dragon-fact > div + div { padding:22px 0 0; border-left:0; border-top:1px solid rgba(217,209,194,.12); }
   .principles { grid-column:1; grid-template-columns:1fr; margin-top:10px; }
   .principles div { border-right:0; border-bottom:1px solid var(--line); padding:26px 0 !important; }
   .orbital-mark { opacity:.5; right:-45px; }
