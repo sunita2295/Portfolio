@@ -218,15 +218,20 @@ button { color: inherit; }
 .crest-1 { background-position: 0 50%; }
 .crest-2 { background-position: 50% 50%; }
 .crest-3 { background-position: 100% 50%; }
-.crest-1::after { content:""; position:absolute; z-index:2; left:22%; right:22%; top:33%; height:34%; border-radius:50%; background:radial-gradient(ellipse, #070809 30%, #0a0908 68%, rgba(7,8,9,.92)); box-shadow:inset 0 0 0 1px rgba(175,121,75,.34), 0 0 15px rgba(0,0,0,.8); transform:scaleY(1); transition:transform .62s cubic-bezier(.2,.75,.18,1), opacity .4s ease; }
-.crest-1::before { content:""; position:absolute; z-index:3; left:27%; right:27%; top:50%; height:1px; background:linear-gradient(90deg, transparent, #b47848 18%, #d44e2e 50%, #b47848 82%, transparent); box-shadow:0 0 8px rgba(216,73,38,.5); transition:opacity .25s ease, transform .55s ease; }
+.crest-1::before, .crest-1::after, .crest-2::before, .crest-2::after { content:""; position:absolute; z-index:2; inset:0; background-image:url('/project-crests-closed.jpg'); background-repeat:no-repeat; background-size:300% auto; opacity:1; transition:transform .76s cubic-bezier(.2,.78,.16,1), opacity .58s ease; }
+.crest-1::before, .crest-1::after { background-position:0 50%; }
+.crest-2::before, .crest-2::after { background-position:50% 50%; }
+.crest-1::before { clip-path:inset(0 0 50% 0); }
+.crest-1::after { clip-path:inset(50% 0 0 0); }
+.crest-2::before { clip-path:inset(0 50% 0 0); }
+.crest-2::after { clip-path:inset(0 0 0 50%); }
 .project-card:hover .project-crest, .project-card:focus .project-crest { filter: saturate(.95) brightness(.95) contrast(1.08); box-shadow: 0 0 0 1px rgba(211,91,52,.42), 0 20px 52px rgba(0,0,0,.58), 0 0 32px rgba(171,57,28,.13); }
-.project-card:hover .crest-1, .project-card:focus .crest-1 { transform:scale(1.035); }
-.project-card:hover .crest-1::after, .project-card:focus .crest-1::after { transform:scaleY(.04); opacity:.08; }
-.project-card:hover .crest-1::before, .project-card:focus .crest-1::before { opacity:0; transform:scaleX(.35); }
-.project-card:hover .crest-2, .project-card:focus .crest-2 { animation:wing-unfurl .9s cubic-bezier(.16,.8,.2,1) both; }
+.project-card:hover .crest-1, .project-card:focus .crest-1, .project-card:hover .crest-2, .project-card:focus .crest-2 { transform:scale(1.035); }
+.project-card:hover .crest-1::before, .project-card:focus .crest-1::before { transform:translateY(-42%); opacity:0; }
+.project-card:hover .crest-1::after, .project-card:focus .crest-1::after { transform:translateY(42%); opacity:0; }
+.project-card:hover .crest-2::before, .project-card:focus .crest-2::before { transform:translateX(-36%) rotate(-2deg); opacity:0; }
+.project-card:hover .crest-2::after, .project-card:focus .crest-2::after { transform:translateX(36%) rotate(2deg); opacity:0; }
 .project-card:hover .crest-3, .project-card:focus .crest-3 { animation:scale-spin 1.05s cubic-bezier(.2,.72,.18,1) both; }
-@keyframes wing-unfurl { 0%{transform:scaleX(.88) scaleY(1.03)} 48%{transform:scaleX(1.13) scaleY(.97)} 74%{transform:scaleX(1.06) scaleY(1.01)} 100%{transform:scaleX(1.09) scaleY(1)} }
 @keyframes scale-spin { 0%{transform:rotate(0) scale(.96)} 72%{transform:rotate(375deg) scale(1.045)} 100%{transform:rotate(360deg) scale(1.025)} }
 .project-main { position: relative; }
 .project-realm { color: #b45035 !important; text-transform: uppercase; letter-spacing: .27em; font-size: 8px !important; margin: 0 0 12px !important; }
