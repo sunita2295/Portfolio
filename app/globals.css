@@ -213,7 +213,7 @@ button { color: inherit; }
 .project-card:hover, .project-card:focus { padding-left: 24px; background: #0b0c0d; }
 .project-card:hover::before, .project-card:focus::before { opacity: 1; }
 .project-visual { position: relative; width: 158px; height: 158px; display: grid; place-items: center; }
-.project-number { position: absolute; z-index: 2; left: -4px; top: -2px; font: 400 28px/1 Iowan Old Style, Baskerville, serif; color: #b54b30; text-shadow: 0 2px 12px #000; }
+.project-number { flex: 0 0 auto; font: 400 29px/1 Iowan Old Style, Baskerville, serif; color: #b54b30; text-shadow: 0 2px 12px #000; }
 .project-crest { display: block; width: 142px; height: 142px; border-radius: 50%; background-image: url('/project-crests.jpg'); background-repeat: no-repeat; background-size: 300% auto; box-shadow: 0 0 0 1px rgba(183,139,95,.22), 0 18px 45px rgba(0,0,0,.48); filter: saturate(.78) brightness(.78) contrast(1.12); transition: .45s ease; }
 .crest-1 { background-position: 0 50%; }
 .crest-2 { background-position: 50% 50%; }
@@ -221,7 +221,8 @@ button { color: inherit; }
 .project-card:hover .project-crest, .project-card:focus .project-crest { filter: saturate(.95) brightness(.95) contrast(1.08); transform: scale(1.035); box-shadow: 0 0 0 1px rgba(211,91,52,.42), 0 20px 52px rgba(0,0,0,.58), 0 0 32px rgba(171,57,28,.13); }
 .project-main { position: relative; }
 .project-realm { color: #b45035 !important; text-transform: uppercase; letter-spacing: .27em; font-size: 8px !important; margin: 0 0 12px !important; }
-.project-main h3 { font: 400 clamp(40px, 3.8vw, 58px)/1 Iowan Old Style, Baskerville, serif; letter-spacing: -.03em; margin: 0 0 18px; color: #d4ccbd; }
+.project-title-row { display: flex; align-items: baseline; gap: 17px; margin: 0 0 18px; }
+.project-main h3 { font: 400 clamp(40px, 3.8vw, 58px)/1 Iowan Old Style, Baskerville, serif; letter-spacing: -.03em; margin: 0; color: #d4ccbd; }
 .project-story { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 700px; }
 .project-story p, .project-proof { margin: 0; color: #9a948b; font-size: 13px; line-height: 1.55; }
 .project-story span, .project-proof span { display: block; margin-bottom: 6px; color: #b45035; text-transform: uppercase; letter-spacing: .22em; font-size: 8px; font-weight: 650; }

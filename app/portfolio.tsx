@@ -146,12 +146,14 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <article className={`project-card ${project.tone}`} key={project.title} tabIndex={0}>
               <div className="project-visual" aria-hidden="true">
-                <span className="project-number">{project.numeral}</span>
                 <span className={`project-crest crest-${index + 1}`} />
               </div>
               <div className="project-main">
                 <p className="project-realm">{project.realm}</p>
-                <h3>{project.title}</h3>
+                <div className="project-title-row">
+                  <span className="project-number">{project.numeral}</span>
+                  <h3>{project.title}</h3>
+                </div>
                 <div className="project-story">
                   <p><span>Problem</span>{project.problem}</p>
                   <p><span>Design move</span>{project.solution}</p>
