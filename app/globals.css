@@ -218,17 +218,16 @@ button { color: inherit; }
 .crest-1 { background-position: 0 50%; }
 .crest-2 { background-position: 50% 50%; }
 .crest-3 { background-position: 100% 50%; }
-.crest-1::before, .crest-1::after, .crest-2::before, .crest-2::after { content:""; position:absolute; z-index:2; inset:0; background-image:url('/project-crests-closed.jpg'); background-repeat:no-repeat; background-size:300% auto; opacity:1; transition:transform .76s cubic-bezier(.2,.78,.16,1), opacity .58s ease; }
-.crest-1::before, .crest-1::after { background-position:0 50%; }
+.crest-1::before, .crest-1::after, .crest-2::before, .crest-2::after { content:""; position:absolute; z-index:2; inset:0; background-repeat:no-repeat; background-size:300% auto; opacity:1; transition:transform .76s cubic-bezier(.2,.78,.16,1), opacity .58s ease, clip-path .76s cubic-bezier(.2,.78,.16,1); }
+.crest-1::before { background-image:url('/project-crests-closed.jpg'); background-position:0 50%; }
+.crest-1::after { z-index:3; background-image:url('/project-crests.jpg'); background-position:0 50%; clip-path:ellipse(35% 0 at 50% 52%); }
 .crest-2::before, .crest-2::after { background-position:50% 50%; }
-.crest-1::before { clip-path:inset(0 0 50% 0); }
-.crest-1::after { clip-path:inset(50% 0 0 0); }
+.crest-2::before, .crest-2::after { background-image:url('/project-crests-closed.jpg'); }
 .crest-2::before { clip-path:inset(0 50% 0 0); }
 .crest-2::after { clip-path:inset(0 0 0 50%); }
 .project-card:hover .project-crest, .project-card:focus .project-crest { filter: saturate(.95) brightness(.95) contrast(1.08); box-shadow: 0 0 0 1px rgba(211,91,52,.42), 0 20px 52px rgba(0,0,0,.58), 0 0 32px rgba(171,57,28,.13); }
-.project-card:hover .crest-1, .project-card:focus .crest-1, .project-card:hover .crest-2, .project-card:focus .crest-2 { transform:scale(1.035); }
-.project-card:hover .crest-1::before, .project-card:focus .crest-1::before { transform:translateY(-42%); opacity:0; }
-.project-card:hover .crest-1::after, .project-card:focus .crest-1::after { transform:translateY(42%); opacity:0; }
+.project-card:hover .crest-2, .project-card:focus .crest-2 { transform:scale(1.035); }
+.project-card:hover .crest-1::after, .project-card:focus .crest-1::after { clip-path:ellipse(35% 20% at 50% 52%); }
 .project-card:hover .crest-2::before, .project-card:focus .crest-2::before { transform:translateX(-36%) rotate(-2deg); opacity:0; }
 .project-card:hover .crest-2::after, .project-card:focus .crest-2::after { transform:translateX(36%) rotate(2deg); opacity:0; }
 .project-card:hover .crest-3, .project-card:focus .crest-3 { animation:scale-spin 1.05s cubic-bezier(.2,.72,.18,1) both; }
