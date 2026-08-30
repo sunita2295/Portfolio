@@ -3,24 +3,24 @@ import { DiscoverConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
   title: "U-Discover Case Study — Sunita Rout",
-  description: "How Sunita Rout shaped a trustworthy GenAI conversation-intelligence workflow into a $2.2M enterprise adoption.",
+  description: "How Sunita Rout shaped U-Discover for Farmers Insurance as the January 2025 Los Angeles wildfires created an urgent need for trustworthy conversation intelligence.",
 };
 
 const blueprintRows = [
   {
     label: "User intent",
     tone: "plain",
-    cells: ["Frame a business question", "Narrow the scope", "Interrogate the answer", "Turn insight into action"],
+    cells: ["Ask an operations question", "Narrow the wildfire context", "Interrogate the evidence", "Brief agents + act"],
   },
   {
     label: "Experience",
     tone: "front",
-    cells: ["Natural-language entry", "Guided clarification", "Answer + evidence trail", "Save, share, revisit"],
+    cells: ["Natural-language entry", "Date, location + claim stage", "Answer + evidence trail", "Save, share, revisit"],
   },
   {
     label: "Intelligence",
     tone: "middle",
-    cells: ["Detect intent", "Build the query plan", "Synthesize grounded insight", "Preserve context"],
+    cells: ["Detect operational intent", "Build a scoped query plan", "Synthesize grounded insight", "Preserve response context"],
   },
   {
     label: "System",
@@ -30,7 +30,7 @@ const blueprintRows = [
   {
     label: "Measure",
     tone: "measure",
-    cells: ["Question quality", "Refinement rate", "Evidence inspection", "Repeat use + adoption"],
+    cells: ["Time to emerging signal", "Refinement rate", "Evidence inspection", "Repeat use + adoption"],
   },
 ];
 
@@ -43,6 +43,7 @@ export default function UDiscoverCaseStudy() {
           <span>Sunita Rout</span>
         </a>
         <nav aria-label="Case study navigation">
+          <a href="#moment">Moment</a>
           <a href="#problem">Problem</a>
           <a href="#system">System</a>
           <a href="#decisions">Decisions</a>
@@ -56,35 +57,50 @@ export default function UDiscoverCaseStudy() {
         <div className="case-hero-grid" aria-hidden="true" />
         <div className="case-orbit" aria-hidden="true"><i /><i /><i /></div>
         <div className="case-hero-copy">
-          <p className="case-kicker">U-Discover · Conversation intelligence · 2023—2026</p>
-          <h1>From thousands of conversations to <em>one answer you can trust.</em></h1>
-          <p className="case-lede">I led the experience strategy for a GenAI product that made enterprise conversation data askable, traceable, and useful at the moment of decision.</p>
+          <p className="case-kicker">U-Discover · Farmers Insurance · Los Angeles wildfires · 2025</p>
+          <h1>When wildfire changed the questions overnight, <em>we found the signal.</em></h1>
+          <p className="case-lede">U-Discover launched into the January 2025 Los Angeles wildfire response—helping 3,000 Farmers Insurance agents turn fast-moving customer conversations into grounded, traceable insight.</p>
         </div>
         <div className="case-hero-proof">
           <div><strong>$2.2M</strong><span>enterprise adoption secured</span></div>
           <div><strong>3,000</strong><span>Farmers Insurance agents</span></div>
           <div><strong>Lead</strong><span>research → strategy → UX</span></div>
         </div>
-        <p className="case-disclosure">Selected process shown. Customer data and proprietary interface details are abstracted.</p>
+        <p className="case-disclosure">Public event context is sourced below. Customer data, research evidence, and proprietary interface details are abstracted.</p>
+      </section>
+
+      <section className="case-section wildfire-moment" id="moment">
+        <div className="case-section-head split-head">
+          <div><p className="case-index">01 · The moment</p><h2>A known disaster.<br /><em>An unknown pattern of need.</em></h2></div>
+          <p>The catastrophe was public. The questions emerging inside thousands of customer conversations were not.</p>
+        </div>
+        <div className="wildfire-timeline">
+          <article><span>JAN 07 · 2025</span><strong>Palisades and Eaton fires begin</strong><p>Two destructive fires ignite in Los Angeles County, changing customer needs and claims operations immediately.</p><a href="https://www.fire.ca.gov/incidents/2025/1/7/palisades-fire" target="_blank" rel="noreferrer">CAL FIRE ↗</a></article>
+          <i aria-hidden="true" />
+          <article><span>JAN 09 · 2025</span><strong>Farmers activates catastrophe response</strong><p>Farmers reports its catastrophe team is helping affected customers and deploying additional claims resources.</p><a href="https://newsroom.farmers.com/2025-01-09-Farmers-Insurance-R-Assisting-Customers-Impacted-by-Southern-California-Wildfires" target="_blank" rel="noreferrer">Farmers newsroom ↗</a></article>
+          <i aria-hidden="true" />
+          <article><span>JAN 27 · 2025</span><strong>31,210 claims across the event</strong><p>California’s insurance regulator reports tens of thousands of home, business, living-expense, and disaster claims filed.</p><a href="https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release011-2025.cfm" target="_blank" rel="noreferrer">CA Dept. of Insurance ↗</a></article>
+        </div>
+        <div className="wildfire-brief"><span>THE PRODUCT QUESTION</span><strong>How might 3,000 agents detect what wildfire-affected customers need now—without waiting for manual analysis?</strong></div>
       </section>
 
       <section className="case-section case-framing" id="problem">
         <div className="case-section-head">
-          <p className="case-index">01 · Find the real problem</p>
-          <h2>The request was AI search.<br /><em>The risk was untrusted answers.</em></h2>
+          <p className="case-index">02 · Find the real problem</p>
+          <h2>The pressure was speed.<br /><em>The requirement was trust.</em></h2>
         </div>
         <div className="problem-layout">
           <div className="problem-copy">
-            <p>Enterprise teams were sitting on thousands of customer conversations, yet getting a reliable answer still depended on analysts, manual filtering, and time-consuming interpretation.</p>
-            <p>The design challenge was not simply to add a prompt box. It was to help people ask better questions, understand what the system searched, and verify why an answer deserved action.</p>
-            <blockquote>“The product succeeds only when an answer can survive the next question: how do you know?”</blockquote>
+            <p>A catastrophe changes contact volume, vocabulary, urgency, and policyholder needs at the same time. Traditional reporting could describe yesterday while agents needed to understand what was changing now.</p>
+            <p>The design challenge was not simply to search wildfire calls. It was to help teams frame an operational question, detect an emerging pattern, and verify the conversations behind it before guidance changed.</p>
+            <blockquote>“In a crisis, an insight is only useful when it is fast enough to act on—and grounded enough to defend.”</blockquote>
           </div>
           <div className="problem-stack" aria-label="Business problem decomposed into product and experience problems">
-            <div className="problem-layer layer-business"><span>Business pressure</span><strong>Make conversation data valuable at enterprise scale</strong></div>
+            <div className="problem-layer layer-business"><span>Business pressure</span><strong>Support policyholders consistently during a fast-changing catastrophe</strong></div>
             <div className="problem-arrow">↓</div>
-            <div className="problem-layer layer-product"><span>Product problem</span><strong>Remove the analyst bottleneck without creating a trust bottleneck</strong></div>
+            <div className="problem-layer layer-product"><span>Product problem</span><strong>Reveal emerging wildfire needs without waiting for manual analysis</strong></div>
             <div className="problem-arrow">↓</div>
-            <div className="problem-layer layer-design"><span>Experience problem</span><strong>Turn a vague question into a traceable, decision-ready answer</strong></div>
+            <div className="problem-layer layer-design"><span>Experience problem</span><strong>Turn an urgent operations question into a traceable, action-ready answer</strong></div>
           </div>
         </div>
       </section>
@@ -92,36 +108,36 @@ export default function UDiscoverCaseStudy() {
       <section className="case-section evidence-section">
         <div className="case-section-head split-head">
           <div>
-            <p className="case-index">02 · Research synthesis</p>
-            <h2>Four failure modes.<br /><em>One trust gap.</em></h2>
+            <p className="case-index">03 · Crisis workflow synthesis</p>
+            <h2>Four ways insight<br /><em>could arrive too late.</em></h2>
           </div>
-          <p>Rather than organize findings by interview, I organized the evidence by where confidence broke across the workflow.</p>
+          <p>I organized the risk around where a fast-moving operational signal could be delayed, distorted, or disconnected from action.</p>
         </div>
         <div className="evidence-map">
-          <div className="evidence-core"><span>CORE TENSION</span><strong>Speed without certainty is not insight.</strong></div>
-          <article><span>01</span><h3>Analyst bottleneck</h3><p>Answers arrived too late to shape the decision.</p></article>
-          <article><span>02</span><h3>Question ambiguity</h3><p>Users knew the decision—not the query syntax.</p></article>
-          <article><span>03</span><h3>Black-box risk</h3><p>A fluent answer could still feel impossible to defend.</p></article>
-          <article><span>04</span><h3>Handoff loss</h3><p>Insight disconnected from the workflow where action happened.</p></article>
+          <div className="evidence-core"><span>CORE TENSION</span><strong>During catastrophe, insight has an expiry time.</strong></div>
+          <article><span>01</span><h3>Demand moved first</h3><p>Conversation needs changed faster than scheduled reporting.</p></article>
+          <article><span>02</span><h3>Language kept shifting</h3><p>Customers described loss, smoke, evacuation, and expenses differently.</p></article>
+          <article><span>03</span><h3>False certainty carried risk</h3><p>A fluent answer without evidence could misdirect frontline guidance.</p></article>
+          <article><span>04</span><h3>Insight needed an owner</h3><p>A pattern mattered only if an operations team could act on it.</p></article>
         </div>
       </section>
 
       <section className="case-section system-section" id="system">
         <div className="case-section-head split-head">
           <div>
-            <p className="case-index">03 · System architecture</p>
-            <h2>I designed the journey<br /><em>behind the answer.</em></h2>
+            <p className="case-index">04 · System architecture</p>
+            <h2>From wildfire question<br /><em>to operational evidence.</em></h2>
           </div>
-          <p>The interface was the visible edge of a larger contract between user intent, model behavior, enterprise data, and evidence.</p>
+          <p>The interface coordinated operational intent, catastrophe context, model behavior, customer conversations, and an evidence trail.</p>
         </div>
         <div className="system-map" aria-label="U-Discover conversation to insight system map">
-          <div className="system-node node-user"><span>01 · INTENT</span><strong>Decision question</strong><small>What is the user trying to decide?</small></div>
+          <div className="system-node node-user"><span>01 · INTENT</span><strong>Wildfire operations question</strong><small>What must the response team understand?</small></div>
           <div className="system-link"><i /><span>clarify</span></div>
-          <div className="system-node"><span>02 · PLAN</span><strong>Query strategy</strong><small>Scope, entities, time, filters</small></div>
+          <div className="system-node"><span>02 · PLAN</span><strong>Catastrophe scope</strong><small>Date, location, topic, claim stage</small></div>
           <div className="system-link"><i /><span>retrieve</span></div>
-          <div className="system-node"><span>03 · GROUND</span><strong>Evidence set</strong><small>Ranked conversations + signals</small></div>
+          <div className="system-node"><span>03 · GROUND</span><strong>Conversation evidence</strong><small>Ranked wildfire calls + emerging themes</small></div>
           <div className="system-link"><i /><span>synthesize</span></div>
-          <div className="system-node node-answer"><span>04 · EXPLAIN</span><strong>Traceable answer</strong><small>Insight, confidence, citations</small></div>
+          <div className="system-node node-answer"><span>04 · EXPLAIN</span><strong>Actionable signal</strong><small>Theme, trend, confidence, citations</small></div>
           <div className="system-foundation">
             <span>Enterprise foundation</span>
             <div>Permissions</div><div>Governance</div><div>Context</div><div>Auditability</div>
@@ -131,8 +147,8 @@ export default function UDiscoverCaseStudy() {
 
       <section className="case-section blueprint-section">
         <div className="case-section-head">
-          <p className="case-index">04 · Service blueprint</p>
-          <h2>One question.<br /><em>Five coordinated layers.</em></h2>
+          <p className="case-index">05 · Response blueprint</p>
+          <h2>One urgent question.<br /><em>Five coordinated layers.</em></h2>
         </div>
         <div className="blueprint-wrap">
           <div className="blueprint" role="table" aria-label="U-Discover service blueprint">
@@ -147,23 +163,23 @@ export default function UDiscoverCaseStudy() {
             ))}
           </div>
         </div>
-        <div className="blueprint-note"><span>Design leverage</span><p>The blueprint exposed ownership gaps early: what the interface could explain, what the model had to return, and what the enterprise layer had to guarantee.</p></div>
+        <div className="blueprint-note"><span>Design leverage</span><p>The blueprint made the response chain explicit: what agents asked, what the model returned, how evidence was verified, and who could turn the signal into guidance.</p></div>
       </section>
 
       <section className="case-section decision-section" id="decisions">
         <div className="case-section-head split-head">
           <div>
-            <p className="case-index">05 · Product decisions</p>
+            <p className="case-index">06 · Product decisions</p>
             <h2>Trust was designed<br /><em>into the interaction.</em></h2>
           </div>
-          <p>Three experience decisions turned the architecture into something people could understand and control.</p>
+          <p>Three experience decisions made catastrophe-speed insight understandable, inspectable, and safe to act on.</p>
         </div>
         <div className="decision-grid">
           <article className="decision-card">
             <div className="question-ladder" aria-hidden="true"><span>Broad question</span><i /><span>Clarified scope</span><i /><strong>Answerable intent</strong></div>
             <p className="decision-number">01 · BEFORE GENERATION</p>
             <h3>Clarify before answering</h3>
-            <p>Translate ambiguity into visible scope—rather than letting the model silently guess.</p>
+            <p>Make date, location, claim stage, and topic visible—rather than letting the model silently guess.</p>
           </article>
           <article className="decision-card">
             <div className="evidence-drawer" aria-hidden="true"><b>Answer</b><span /><span /><div><i>01</i><i>02</i><i>03</i></div></div>
@@ -182,17 +198,17 @@ export default function UDiscoverCaseStudy() {
 
       <section className="case-section product-surface" id="surface">
         <div className="case-section-head split-head">
-          <div><p className="case-index">06 · Product surface</p><h2>The strategy becomes<br /><em>a usable point of view.</em></h2></div>
-          <p>A custom concept screen shows how question refinement, grounded synthesis, and evidence inspection can coexist without exposing production UI.</p>
+          <div><p className="case-index">07 · Product surface</p><h2>Wildfire response,<br /><em>made interrogable.</em></h2></div>
+          <p>The concept shows an operations team asking what drives repeat wildfire contact, seeing an emerging theme, and opening the conversations behind it.</p>
         </div>
         <DiscoverConceptScreen />
       </section>
 
       <section className="case-section outcome-section" id="outcome">
         <div className="outcome-intro">
-          <p className="case-index">07 · Outcome</p>
-          <h2>The system earned<br /><em>enterprise belief.</em></h2>
-          <p>The strongest validation was not a prettier interface. It was enterprise commitment to a product that made AI-generated insight understandable enough to adopt.</p>
+          <p className="case-index">08 · Outcome</p>
+          <h2>Trust was proven<br /><em>when the stakes were real.</em></h2>
+          <p>The strongest validation was enterprise commitment to a product that made fast-moving customer insight understandable enough to use during a nationally recognized catastrophe response.</p>
         </div>
         <div className="outcome-ledger">
           <div><strong>$2.2M</strong><span>enterprise adoption secured</span></div>
@@ -206,7 +222,7 @@ export default function UDiscoverCaseStudy() {
       </section>
 
       <section className="case-next">
-        <p>That is what “the system behind the screen” looks like in practice.</p>
+        <p>A known disaster made the product problem instantly legible: find the signal before the need changes again.</p>
         <a href="/#work">Return to selected work <span>↗</span></a>
       </section>
     </main>

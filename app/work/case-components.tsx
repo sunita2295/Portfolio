@@ -35,31 +35,31 @@ function WindowBar({ title, action }: { title: string; action: string }) {
 export function DiscoverConceptScreen() {
   return (
     <div className="screen-stage discover-screen">
-      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Insight workspace — question, answer, and evidence in one traceable view</p></div>
+      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Wildfire claims pulse — emerging need, grounded answer, and evidence in one view</p></div>
       <div className="mock-window">
         <WindowBar title="Conversation intelligence" action="Share insight" />
         <div className="discover-app">
           <aside className="mock-icon-rail" aria-hidden="true"><b>⌁</b><i>◫</i><i>⌕</i><i>◇</i><i>↗</i><em>?</em></aside>
           <section className="discover-main">
-            <div className="mock-page-title"><div><small>ANALYSIS WORKSPACE</small><h3>Repeat contact drivers</h3></div><span>Last 90 days⌄</span></div>
-            <div className="query-card"><small>ASK YOUR CONVERSATIONS</small><p>Why are customers calling back within 7 days?</p><div><span>All service teams</span><span>18.4K conversations</span><button type="button">Ask ↗</button></div></div>
+            <div className="mock-page-title"><div><small>CATASTROPHE RESPONSE / LOS ANGELES</small><h3>Wildfire claims pulse</h3></div><span>Jan 07—31⌄</span></div>
+            <div className="query-card"><small>ASK WILDFIRE CONVERSATIONS</small><p>What is driving repeat wildfire claims calls this week?</p><div><span>LA wildfire response</span><span>512 conversations</span><button type="button">Ask ↗</button></div></div>
             <article className="answer-card">
               <div className="answer-meta"><span>GROUNDED ANSWER</span><b>High confidence</b></div>
-              <h4>Billing handoff is the strongest repeat-contact signal.</h4>
-              <p>Customers who leave the first call without a clear ownership handoff are 2.4× more likely to contact support again within seven days.</p>
-              <div className="answer-insights"><div><i style={{"--bar":"82%"} as React.CSSProperties} /><span>Ownership unclear</span><strong>42%</strong></div><div><i style={{"--bar":"61%"} as React.CSSProperties} /><span>Promise not recorded</span><strong>31%</strong></div><div><i style={{"--bar":"38%"} as React.CSSProperties} /><span>Status uncertainty</span><strong>19%</strong></div></div>
+              <h4>Temporary-living-expense next steps are the clearest repeat-contact signal.</h4>
+              <p>Conversations show uncertainty after the first notice of loss: customers need clearer guidance on eligible expenses, documentation, and what happens next.</p>
+              <div className="answer-insights"><div><i style={{"--bar":"82%"} as React.CSSProperties} /><span>Temporary housing steps</span><strong>38%</strong></div><div><i style={{"--bar":"61%"} as React.CSSProperties} /><span>Documentation required</span><strong>27%</strong></div><div><i style={{"--bar":"38%"} as React.CSSProperties} /><span>Claim status unclear</span><strong>21%</strong></div></div>
             </article>
           </section>
           <aside className="evidence-panel">
-            <div className="evidence-title"><span>EVIDENCE</span><strong>642 conversations</strong></div>
-            <article><b>01</b><p>“I was told billing would own it, but I don’t know who to contact...”</p><span>Billing · 02:14</span></article>
-            <article><b>02</b><p>“The previous agent said it was resolved. The balance still appears...”</p><span>Account · 04:38</span></article>
-            <article><b>03</b><p>“I’m calling again because there was no confirmation after the transfer...”</p><span>Support · 01:52</span></article>
+            <div className="evidence-title"><span>EVIDENCE</span><strong>512 conversations</strong></div>
+            <article><b>01</b><p>“My home is uninhabitable—what should I upload for temporary housing?”</p><span>Living expenses · 02:14</span></article>
+            <article><b>02</b><p>“I received the first payment, but I’m not sure which expenses it covers...”</p><span>Claims payment · 04:38</span></article>
+            <article><b>03</b><p>“I’m calling again because I need the next step after reporting smoke damage...”</p><span>Property claim · 01:52</span></article>
             <button type="button">Open evidence set →</button>
           </aside>
         </div>
       </div>
-      <p className="screen-disclaimer">Fictionalized interface and data. The screen demonstrates the product logic without reproducing confidential production UI.</p>
+      <p className="screen-disclaimer">Fictionalized interface, queries, quotes, and data based on a public wildfire-response scenario. No confidential Farmers data or production UI is reproduced.</p>
     </div>
   );
 }
