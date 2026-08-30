@@ -179,7 +179,7 @@ export default function Portfolio() {
         <div className="about-stage">
           <figure className="about-portrait">
             <img
-              src="/sunita-editorial-about.jpg"
+                    src="/sunita-editorial-about-v2.jpg"
               alt="Sunita Rout in a cinematic editorial portrait"
               loading="lazy"
               decoding="async"
