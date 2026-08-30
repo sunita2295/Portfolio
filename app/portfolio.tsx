@@ -177,15 +177,27 @@ export default function Portfolio() {
       <section className="about-section" id="about">
         <div className="about-kicker"><span>How I create leverage</span></div>
         <div className="about-stage">
+          <figure className="about-portrait">
+            <img
+              src="/sunita-editorial-about.jpg"
+              alt="Sunita Rout in a cinematic editorial portrait"
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="portrait-arc" aria-hidden="true" />
+            <figcaption>
+              <span>Sunita Rout</span>
+              <strong>The designer behind the systems</strong>
+            </figcaption>
+          </figure>
           <div className="about-copy">
-            <p className="pull-quote">Research the truth.<br />Design the system.<br />Prove the outcome.</p>
-            <p className="about-intro">I connect user evidence, product strategy, and scalable interaction patterns—then measure what changed.</p>
-          </div>
-          <div className="method-orbit" aria-hidden="true">
-            <div className="orbit-core"><span>Design</span><strong>Leverage</strong></div>
-            <span className="orbit-label orbit-research">Research</span>
-            <span className="orbit-label orbit-systems">Systems</span>
-            <span className="orbit-label orbit-outcomes">Outcomes</span>
+            <p className="eyebrow">Research · systems · outcomes</p>
+            <p className="pull-quote">I turn ambiguity into product decisions teams can ship—and outcomes leaders can measure.</p>
+            <p className="about-intro">Research shows me where the system breaks. Product strategy decides what matters. Interaction design makes the fix clear, scalable, and usable.</p>
+            <div className="about-facts" aria-label="Design practice at a glance">
+              <div><strong>6+</strong><span>years shaping complex products</span></div>
+              <div><strong>3</strong><span>moves: evidence, system, outcome</span></div>
+            </div>
           </div>
           <div className="principles">
             <div><i aria-hidden="true">◉</i><span>01 · RESEARCH</span><strong>Find the constraint</strong></div>
@@ -193,8 +205,8 @@ export default function Portfolio() {
             <div><i aria-hidden="true">↗</i><span>03 · OUTCOMES</span><strong>Prove what moved</strong></div>
           </div>
           <aside className="lore-strip">
-            <span>Dragon fan · HOTD-inspired</span>
-            <p>Conceived from scratch and built with AI as my creative collaborator—from blank canvas to live experience.</p>
+            <span>Fun fact · lifelong dragon fan</span>
+            <p>The realm is personal. I art-directed and built this theme from a blank canvas with AI as my creative making tool.</p>
           </aside>
         </div>
       </section>
