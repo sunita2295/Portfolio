@@ -35,31 +35,36 @@ function WindowBar({ title, action }: { title: string; action: string }) {
 export function DiscoverConceptScreen() {
   return (
     <div className="screen-stage discover-screen">
-      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Wildfire claims pulse — emerging need, grounded answer, and evidence in one view</p></div>
+      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Live-call intent discovery — agent assist and supervisor issue pulse in one system</p></div>
       <div className="mock-window">
-        <WindowBar title="Conversation intelligence" action="Share insight" />
+        <WindowBar title="Live conversation intelligence" action="Open supervisor view" />
         <div className="discover-app">
           <aside className="mock-icon-rail" aria-hidden="true"><b>⌁</b><i>◫</i><i>⌕</i><i>◇</i><i>↗</i><em>?</em></aside>
-          <section className="discover-main">
-            <div className="mock-page-title"><div><small>CATASTROPHE RESPONSE / LOS ANGELES</small><h3>Wildfire claims pulse</h3></div><span>Jan 07—31⌄</span></div>
-            <div className="query-card"><small>ASK WILDFIRE CONVERSATIONS</small><p>What is driving repeat wildfire claims calls this week?</p><div><span>LA wildfire response</span><span>512 conversations</span><button type="button">Ask ↗</button></div></div>
-            <article className="answer-card">
-              <div className="answer-meta"><span>GROUNDED ANSWER</span><b>High confidence</b></div>
-              <h4>Temporary-living-expense next steps are the clearest repeat-contact signal.</h4>
-              <p>Conversations show uncertainty after the first notice of loss: customers need clearer guidance on eligible expenses, documentation, and what happens next.</p>
-              <div className="answer-insights"><div><i style={{"--bar":"82%"} as React.CSSProperties} /><span>Temporary housing steps</span><strong>38%</strong></div><div><i style={{"--bar":"61%"} as React.CSSProperties} /><span>Documentation required</span><strong>27%</strong></div><div><i style={{"--bar":"38%"} as React.CSSProperties} /><span>Claim status unclear</span><strong>21%</strong></div></div>
-            </article>
+          <section className="live-transcript">
+            <div className="live-head"><div><small>LIVE CALL · 08:42</small><strong>Customer · Los Angeles County</strong></div><span><i /> Recording</span></div>
+            <div className="transcript-stream">
+              <article className="customer-line"><b>Customer</b><p>We evacuated Tuesday. There’s smoke damage, and we can’t stay in the house. I already reported it, but I’m not sure what happens now.</p><span>08:36</span></article>
+              <article className="agent-line"><b>Agent</b><p>I’m sorry you’re going through this. Let me confirm what has already been captured so I don’t make you repeat it.</p><span>08:39</span></article>
+              <article className="customer-line active-line"><b>Customer</b><p>Mostly I need to know whether temporary housing is covered and what receipts I should keep...</p><span>08:42</span></article>
+            </div>
+            <div className="voice-wave" aria-hidden="true">{Array.from({length:24}).map((_,index)=><i key={index} />)}</div>
           </section>
-          <aside className="evidence-panel">
-            <div className="evidence-title"><span>EVIDENCE</span><strong>512 conversations</strong></div>
-            <article><b>01</b><p>“My home is uninhabitable—what should I upload for temporary housing?”</p><span>Living expenses · 02:14</span></article>
-            <article><b>02</b><p>“I received the first payment, but I’m not sure which expenses it covers...”</p><span>Claims payment · 04:38</span></article>
-            <article><b>03</b><p>“I’m calling again because I need the next step after reporting smoke damage...”</p><span>Property claim · 01:52</span></article>
-            <button type="button">Open evidence set →</button>
+          <section className="agent-assist">
+            <div className="assist-title"><div><small>AI INTENT DISCOVERY</small><h3>Wildfire property claim</h3></div><span>91% confidence</span></div>
+            <div className="intent-chips"><span>Smoke damage</span><span>Displacement</span><span>Living expenses</span></div>
+            <article className="capture-card"><div><span>AUTOMATED CAPTURE</span><b>4 of 5</b></div><p><i>✓</i><span><strong>Safety status</strong>Customer safely evacuated</span></p><p><i>✓</i><span><strong>Property matched</strong>Los Angeles County residence</span></p><p><i>✓</i><span><strong>Loss type</strong>Smoke + access restriction</span></p><p><i>✓</i><span><strong>Immediate need</strong>Temporary accommodation</span></p><p className="needs-agent"><i>?</i><span><strong>Needs agent judgement</strong>Current property access status</span></p></article>
+            <article className="next-best"><span>NEXT BEST QUESTION</span><strong>“Has a local authority said when the property may be safely accessed?”</strong><p>Why: determines the next claim-handling path.</p><button type="button">Use question ↗</button></article>
+            <div className="assist-actions"><button type="button">Create call summary</button><button type="button">Open claim guidance</button></div>
+          </section>
+          <aside className="supervisor-pulse">
+            <div className="pulse-title"><span>SUPERVISOR PULSE</span><strong>LA wildfire response</strong><small><i /> 12 agents live</small></div>
+            <article className="emerging-issue"><span>EMERGING ISSUE · ↑ 18%</span><strong>Living-expense guidance</strong><p>Uncertainty is increasing across active wildfire calls.</p><div className="pulse-bars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div><b>38% of current calls</b></article>
+            <div className="intent-list"><span>TOP LIVE INTENTS</span><p><b>01</b><i>Temporary housing</i><strong>38%</strong></p><p><b>02</b><i>Smoke damage</i><strong>27%</strong></p><p><b>03</b><i>Claim status</i><strong>21%</strong></p></div>
+            <article className="supervisor-action"><span>SUGGESTED ACTION</span><p>Clarify temporary-living-expense guidance for frontline agents.</p><button type="button">Review evidence →</button></article>
           </aside>
         </div>
       </div>
-      <p className="screen-disclaimer">Fictionalized interface, queries, quotes, and data based on a public wildfire-response scenario. No confidential Farmers data or production UI is reproduced.</p>
+      <p className="screen-disclaimer">Fictionalized interface, transcript, intents, and data based on the public wildfire-response scenario. No confidential Farmers data or production UI is reproduced.</p>
     </div>
   );
 }
