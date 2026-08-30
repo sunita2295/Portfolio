@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CaseHeader, CaseNext } from "../case-components";
+import { CaseHeader, CaseNext, CommerceConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
   title: "Redington Online Case Study — Sunita Rout",
@@ -16,7 +16,7 @@ const journeyRows = [
 export default function RedingtonCaseStudy() {
   return (
     <main className="case-shell case-steel">
-      <CaseHeader sections={[["Problem", "#problem"], ["Journey", "#journey"], ["Model", "#model"], ["Outcome", "#outcome"]]} />
+      <CaseHeader sections={[["Problem", "#problem"], ["Journey", "#journey"], ["Model", "#model"], ["Surface", "#surface"], ["Outcome", "#outcome"]]} />
 
       <section className="case-hero steel-hero">
         <div className="case-hero-grid" aria-hidden="true" />
@@ -111,9 +111,17 @@ export default function RedingtonCaseStudy() {
         </div>
       </section>
 
+      <section className="case-section product-surface steel-surface" id="surface">
+        <div className="case-section-head split-head">
+          <div><p className="case-index">05 · Product surface</p><h2>Continuity made<br /><em>visible and actionable.</em></h2></div>
+          <p>The concept carries requirement context from discovery into an order workspace—showing the journey model at screen level without copying confidential UI.</p>
+        </div>
+        <CommerceConceptScreen />
+      </section>
+
       <section className="case-section outcome-section steel-outcome" id="outcome">
         <div className="outcome-intro">
-          <p className="case-index">05 · Current outcome</p>
+          <p className="case-index">06 · Current outcome</p>
           <h2>The transformation is live.<br /><em>The evidence is still moving.</em></h2>
           <p>This is ongoing work, so I do not turn unfinished measurement into a polished claim. The value delivered now is a connected journey model, a research-led operating rhythm, and a measurement structure built into the work.</p>
         </div>

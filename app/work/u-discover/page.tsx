@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DiscoverConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
   title: "U-Discover Case Study — Sunita Rout",
@@ -45,6 +46,7 @@ export default function UDiscoverCaseStudy() {
           <a href="#problem">Problem</a>
           <a href="#system">System</a>
           <a href="#decisions">Decisions</a>
+          <a href="#surface">Surface</a>
           <a href="#outcome">Outcome</a>
         </nav>
         <a className="case-close" href="/">Close ×</a>
@@ -178,9 +180,17 @@ export default function UDiscoverCaseStudy() {
         </div>
       </section>
 
+      <section className="case-section product-surface" id="surface">
+        <div className="case-section-head split-head">
+          <div><p className="case-index">06 · Product surface</p><h2>The strategy becomes<br /><em>a usable point of view.</em></h2></div>
+          <p>A custom concept screen shows how question refinement, grounded synthesis, and evidence inspection can coexist without exposing production UI.</p>
+        </div>
+        <DiscoverConceptScreen />
+      </section>
+
       <section className="case-section outcome-section" id="outcome">
         <div className="outcome-intro">
-          <p className="case-index">06 · Outcome</p>
+          <p className="case-index">07 · Outcome</p>
           <h2>The system earned<br /><em>enterprise belief.</em></h2>
           <p>The strongest validation was not a prettier interface. It was enterprise commitment to a product that made AI-generated insight understandable enough to adopt.</p>
         </div>

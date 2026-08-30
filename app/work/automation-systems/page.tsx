@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CaseHeader, CaseNext } from "../case-components";
+import { CaseHeader, CaseNext, AutomationConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
   title: "Automation Systems Case Study — Sunita Rout",
@@ -16,7 +16,7 @@ const lifecycle = [
 export default function AutomationSystemsCaseStudy() {
   return (
     <main className="case-shell case-ash">
-      <CaseHeader sections={[["Problem", "#problem"], ["Pattern", "#pattern"], ["Scale", "#scale"], ["Outcome", "#outcome"]]} />
+      <CaseHeader sections={[["Problem", "#problem"], ["Pattern", "#pattern"], ["Scale", "#scale"], ["Surface", "#surface"], ["Outcome", "#outcome"]]} />
 
       <section className="case-hero ash-hero">
         <div className="case-hero-grid" aria-hidden="true" />
@@ -116,9 +116,17 @@ export default function AutomationSystemsCaseStudy() {
         <div className="matrix-key"><span>● Shared core</span><span>○ Context-specific variation</span></div>
       </section>
 
+      <section className="case-section product-surface ash-surface" id="surface">
+        <div className="case-section-head split-head">
+          <div><p className="case-index">05 · Product surface</p><h2>Reusable logic.<br /><em>Inspectable execution.</em></h2></div>
+          <p>The concept screen demonstrates how a shared automation grammar can feel tangible, configurable, and safe—without recreating a proprietary product.</p>
+        </div>
+        <AutomationConceptScreen />
+      </section>
+
       <section className="case-section outcome-section ash-outcome" id="outcome">
         <div className="outcome-intro">
-          <p className="case-index">05 · Outcome</p>
+          <p className="case-index">06 · Outcome</p>
           <h2>Consistency became<br /><em>a growth mechanism.</em></h2>
           <p>The reusable system accelerated rollout while the automation strategy contributed to stronger retention, conversion, and churn performance across the product suite.</p>
         </div>
