@@ -214,7 +214,7 @@ export default function Portfolio() {
       <section className="experience-section" id="experience">
         <div className="section-heading compact">
           <p className="eyebrow">Six industries · one repeatable advantage</p>
-          <h2>Range built<br /><em>the judgement.</em></h2>
+          <h2>Range built <em>the judgement.</em></h2>
           <p>AI, commerce, video analytics, insurance, logistics, and enterprise tools taught me to separate surface friction from system failure.</p>
         </div>
         <div className="timeline">
