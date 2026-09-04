@@ -35,7 +35,7 @@ function WindowBar({ title, action }: { title: string; action: string }) {
 export function DiscoverConceptScreen() {
   return (
     <div className="screen-stage discover-screen">
-      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Live-call intent discovery — agent assist and supervisor issue pulse in one system</p></div>
+      <div className="screen-caption"><span>Concept reconstruction · 01</span><p>Live call intent discovery, agent assist and supervisor issue pulse in one system</p></div>
       <div className="mock-window">
         <WindowBar title="Live conversation intelligence" action="Open supervisor view" />
         <div className="discover-app">
@@ -53,18 +53,18 @@ export function DiscoverConceptScreen() {
             <div className="assist-title"><div><small>AI INTENT DISCOVERY</small><h3>Wildfire property claim</h3></div><span>91% confidence</span></div>
             <div className="intent-chips"><span>Smoke damage</span><span>Displacement</span><span>Living expenses</span></div>
             <article className="capture-card"><div><span>AUTOMATED CAPTURE</span><b>4 of 5</b></div><p><i>✓</i><span><strong>Safety status</strong>Customer safely evacuated</span></p><p><i>✓</i><span><strong>Property matched</strong>Los Angeles County residence</span></p><p><i>✓</i><span><strong>Loss type</strong>Smoke + access restriction</span></p><p><i>✓</i><span><strong>Immediate need</strong>Temporary accommodation</span></p><p className="needs-agent"><i>?</i><span><strong>Needs agent judgement</strong>Current property access status</span></p></article>
-            <article className="next-best"><span>NEXT BEST QUESTION</span><strong>“Has a local authority said when the property may be safely accessed?”</strong><p>Why: determines the next claim-handling path.</p><button type="button">Use question ↗</button></article>
+            <article className="next-best"><span>NEXT BEST QUESTION</span><strong>“Has a local authority said when the property may be safely accessed?”</strong><p>Why: determines the next claim path.</p><button type="button">Use question ↗</button></article>
             <div className="assist-actions"><button type="button">Create call summary</button><button type="button">Open claim guidance</button></div>
           </section>
           <aside className="supervisor-pulse">
             <div className="pulse-title"><span>SUPERVISOR PULSE</span><strong>LA wildfire response</strong><small><i /> 12 agents live</small></div>
-            <article className="emerging-issue"><span>EMERGING ISSUE · ↑ 18%</span><strong>Living-expense guidance</strong><p>Uncertainty is increasing across active wildfire calls.</p><div className="pulse-bars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div><b>38% of current calls</b></article>
+            <article className="emerging-issue"><span>EMERGING ISSUE · ↑ 18%</span><strong>Living expense guidance</strong><p>Uncertainty is increasing across active wildfire calls.</p><div className="pulse-bars" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div><b>38% of current calls</b></article>
             <div className="intent-list"><span>TOP LIVE INTENTS</span><p><b>01</b><i>Temporary housing</i><strong>38%</strong></p><p><b>02</b><i>Smoke damage</i><strong>27%</strong></p><p><b>03</b><i>Claim status</i><strong>21%</strong></p></div>
-            <article className="supervisor-action"><span>SUGGESTED ACTION</span><p>Clarify temporary-living-expense guidance for frontline agents.</p><button type="button">Review evidence →</button></article>
+            <article className="supervisor-action"><span>SUGGESTED ACTION</span><p>Clarify temporary living expense guidance for frontline agents.</p><button type="button">Review evidence →</button></article>
           </aside>
         </div>
       </div>
-      <p className="screen-disclaimer">Fictionalized interface, transcript, intents, and data based on the public wildfire-response scenario. No confidential Farmers data or production UI is reproduced.</p>
+      <p className="screen-disclaimer">Fictionalized interface, transcript, intents, and data based on the public wildfire response scenario. No confidential Farmers data or production UI is reproduced.</p>
     </div>
   );
 }
@@ -72,7 +72,7 @@ export function DiscoverConceptScreen() {
 export function CommerceConceptScreen() {
   return (
     <div className="screen-stage commerce-screen">
-      <div className="screen-caption"><span>Concept reconstruction · 02</span><p>Connected commerce workspace — discovery context flows into ordering</p></div>
+      <div className="screen-caption"><span>Concept reconstruction · 02</span><p>Connected commerce workspace, discovery context flows into ordering</p></div>
       <div className="mock-window">
         <WindowBar title="Partner commerce workspace" action="Help center" />
         <div className="commerce-app">
@@ -84,13 +84,13 @@ export function CommerceConceptScreen() {
           <section className="catalog-main">
             <div className="catalog-head"><div><small>CATALOG / SECURITY</small><h3>Build a secure edge solution</h3><p>142 products · pricing available for your account</p></div><button type="button">＋ Compare</button></div>
             <div className="catalog-search"><span>⌕</span><p>Search products, capabilities, or use cases</p><b>⌘ K</b></div>
-            <div className="catalog-context"><span>Active requirement</span><p>12 sites · 500–1,000 users · annual term</p><button type="button">Edit</button></div>
+            <div className="catalog-context"><span>Active requirement</span><p>12 sites · 500 to 1,000 users · annual term</p><button type="button">Edit</button></div>
             <div className="product-table">
               <div className="product-head"><span>Product</span><span>Fit</span><span>Availability</span><span>Partner price</span><span /></div>
               {[
                 ["SecureEdge Gateway","Best match","In stock","₹ 2,48,400"],
-                ["Cloud Access Shield","Compatible","2–3 days","₹ 1,86,200"],
-                ["Managed Threat Core","Add-on","Digital","₹ 74,900"],
+                ["Cloud Access Shield","Compatible","2 to 3 days","₹ 1,86,200"],
+                ["Managed Threat Core","Extension","Digital","₹ 74,900"],
               ].map((item,index)=><div className="product-row" key={item[0]}><span><i>{index+1}</i><b>{item[0]}</b><small>Enterprise subscription</small></span><span>{item[1]}</span><span><em />{item[2]}</span><strong>{item[3]}</strong><button type="button">Add +</button></div>)}
             </div>
           </section>
@@ -112,7 +112,7 @@ export function CommerceConceptScreen() {
 export function AutomationConceptScreen() {
   return (
     <div className="screen-stage automation-screen">
-      <div className="screen-caption"><span>Concept reconstruction · 03</span><p>Workflow builder — shared patterns make complex AI behavior inspectable</p></div>
+      <div className="screen-caption"><span>Concept reconstruction · 03</span><p>Workflow builder, shared patterns make complex AI behavior inspectable</p></div>
       <div className="mock-window">
         <WindowBar title="Automation studio" action="Publish workflow" />
         <div className="automation-app">
@@ -122,7 +122,7 @@ export function AutomationConceptScreen() {
             <div className="block-library"><small>BUILDING BLOCKS</small><span>⚡ Trigger</span><span>◇ AI decision</span><span>☷ Human review</span><span>↗ Action</span></div>
           </aside>
           <section className="workflow-canvas">
-            <div className="canvas-toolbar"><span>Case triage / v12</span><div><button>−</button><b>80%</b><button>＋</button></div></div>
+            <div className="canvas-toolbar"><span>Case triage / v12</span><div><button aria-label="Zoom out">◁</button><b>80%</b><button aria-label="Zoom in">＋</button></div></div>
             <div className="workflow-grid" aria-label="Concept workflow with connected automation nodes">
               <article className="flow-node trigger-node"><small>TRIGGER</small><strong>New case received</strong><span>Queue: Priority support</span><i /></article>
               <b className="flow-line line-one" /><span className="flow-label label-one">case context</span>
@@ -137,13 +137,13 @@ export function AutomationConceptScreen() {
             <div className="config-head"><span>SELECTED BLOCK</span><strong>Review recommendation</strong><button type="button">•••</button></div>
             <label>ASSIGNEE RULE<span>Risk owner by region⌄</span></label><label>RESPONSE WINDOW<span>15 minutes⌄</span></label>
             <div className="config-toggle"><p><strong>Require explanation</strong><small>Reviewer must add context</small></p><i className="on" /></div>
-            <div className="config-toggle"><p><strong>Auto-escalate</strong><small>When response window expires</small></p><i className="on" /></div>
+            <div className="config-toggle"><p><strong>Automatic escalation</strong><small>When response window expires</small></p><i className="on" /></div>
             <div className="config-branch"><small>ON APPROVAL</small><span>Continue to Route + notify owner</span></div>
             <button type="button">Save configuration</button>
           </aside>
         </div>
       </div>
-      <p className="screen-disclaimer">Fictionalized workflow and interface. The reusable interaction model—not a production screen—is the artifact being demonstrated.</p>
+      <p className="screen-disclaimer">Fictionalized workflow and interface. The reusable interaction model, not a production screen, is the artifact being demonstrated.</p>
     </div>
   );
 }

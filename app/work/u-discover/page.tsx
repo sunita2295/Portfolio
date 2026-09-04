@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { DiscoverConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
-  title: "U-Discover Case Study — Sunita Rout",
-  description: "How Sunita Rout shaped U-Discover for Farmers Insurance as the January 2025 Los Angeles wildfires created an urgent need for trustworthy conversation intelligence.",
+  title: "U Discover Case Study | Sunita Rout",
+  description: "How Sunita Rout shaped U Discover for Farmers Insurance as the January 2025 Los Angeles wildfires created an urgent need for trustworthy conversation intelligence.",
 };
 
 const blueprintRows = [
@@ -30,7 +30,7 @@ const blueprintRows = [
   {
     label: "Measure",
     tone: "measure",
-    cells: ["Intent accuracy", "Agent correction rate", "Questions avoided + AHT", "Emerging-issue detection"],
+    cells: ["Intent accuracy", "Agent correction rate", "Questions avoided + AHT", "Emerging issue detection"],
   },
 ];
 
@@ -57,9 +57,9 @@ export default function UDiscoverCaseStudy() {
         <div className="case-hero-grid" aria-hidden="true" />
         <div className="case-orbit" aria-hidden="true"><i /><i /><i /></div>
         <div className="case-hero-copy">
-          <p className="case-kicker">U-Discover · Farmers Insurance · Los Angeles wildfires · 2025</p>
+          <p className="case-kicker">U Discover · Farmers Insurance · Los Angeles wildfires · 2025</p>
           <h1>While the customer was still speaking, <em>AI found what mattered.</em></h1>
-          <p className="case-lede">U-Discover launched into the January 2025 Los Angeles wildfire response as a live-call intent discovery and agent-assist experience—helping 3,000 Farmers Insurance agents automate repetition, detect issues, and focus on the human conversation.</p>
+          <p className="case-lede">U Discover launched into the January 2025 Los Angeles wildfire response as a live call intent discovery and agent assist experience, helping 3,000 Farmers Insurance agents automate repetition, detect issues, and focus on the human conversation.</p>
         </div>
         <div className="case-hero-proof">
           <div><strong>$2.2M</strong><span>enterprise adoption secured</span></div>
@@ -79,7 +79,7 @@ export default function UDiscoverCaseStudy() {
           <i aria-hidden="true" />
           <article><span>JAN 09 · 2025</span><strong>Farmers activates catastrophe response</strong><p>Farmers reports its catastrophe team is helping affected customers and deploying additional claims resources.</p><a href="https://newsroom.farmers.com/2025-01-09-Farmers-Insurance-R-Assisting-Customers-Impacted-by-Southern-California-Wildfires" target="_blank" rel="noreferrer">Farmers newsroom ↗</a></article>
           <i aria-hidden="true" />
-          <article><span>JAN 27 · 2025</span><strong>31,210 claims across the event</strong><p>California’s insurance regulator reports tens of thousands of home, business, living-expense, and disaster claims filed.</p><a href="https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release011-2025.cfm" target="_blank" rel="noreferrer">CA Dept. of Insurance ↗</a></article>
+          <article><span>JAN 27 · 2025</span><strong>31,210 claims across the event</strong><p>California’s insurance regulator reports tens of thousands of home, business, living expense, and disaster claims filed.</p><a href="https://www.insurance.ca.gov/0400-news/0100-press-releases/2025/release011-2025.cfm" target="_blank" rel="noreferrer">CA Dept. of Insurance ↗</a></article>
         </div>
         <div className="wildfire-brief"><span>THE PRODUCT QUESTION</span><strong>How might AI understand intent during live wildfire calls, automate repetition, and expose emerging issues to supervisors in real time?</strong></div>
       </section>
@@ -92,15 +92,15 @@ export default function UDiscoverCaseStudy() {
         <div className="problem-layout">
           <div className="problem-copy">
             <p>A wildfire call rarely begins with a clean label. Customers describe evacuation, smoke, damaged property, temporary housing, documents, payments, and fear in the same conversation. Agents still need to identify the intent, capture essentials, resolve repetitive questions, and remain present.</p>
-            <p>The product challenge was to let AI handle the mechanical work while the call was live—then aggregate those detected intents so supervisors could see recurring issues before they became an operational backlog.</p>
-            <blockquote>“The AI should remove repetition from the call—not humanity from the response.”</blockquote>
+            <p>The product challenge was to let AI handle the mechanical work while the call was live, then aggregate those detected intents so supervisors could see recurring issues before they became an operational backlog.</p>
+            <blockquote>“The AI should remove repetition from the call, not humanity from the response.”</blockquote>
           </div>
           <div className="problem-stack" aria-label="Business problem decomposed into product and experience problems">
-            <div className="problem-layer layer-business"><span>Business pressure</span><strong>Scale consistent support across a surge of high-stakes wildfire calls</strong></div>
+            <div className="problem-layer layer-business"><span>Business pressure</span><strong>Scale consistent support across a surge of critical wildfire calls</strong></div>
             <div className="problem-arrow">↓</div>
             <div className="problem-layer layer-product"><span>Product problem</span><strong>Detect intent and automate repetitive work while the customer is still on the call</strong></div>
             <div className="problem-arrow">↓</div>
-            <div className="problem-layer layer-design"><span>Experience problem</span><strong>Guide agents without stealing control—and turn every call into a supervisor signal</strong></div>
+            <div className="problem-layer layer-design"><span>Experience problem</span><strong>Guide agents without stealing control, and turn every call into a supervisor signal</strong></div>
           </div>
         </div>
       </section>
@@ -111,14 +111,14 @@ export default function UDiscoverCaseStudy() {
             <p className="case-index">03 · Crisis workflow synthesis</p>
             <h2>Four places the call<br /><em>could lose what mattered.</em></h2>
           </div>
-          <p>I mapped where agent attention, customer intent, automation, and supervisor awareness broke across the live-call workflow.</p>
+          <p>I mapped where agent attention, customer intent, automation, and supervisor awareness broke across the live call workflow.</p>
         </div>
         <div className="evidence-map">
           <div className="evidence-core"><span>CORE TENSION</span><strong>Automate the obvious. Protect the human moment.</strong></div>
-          <article><span>01</span><h3>Intent arrived unstructured</h3><p>One emotional account could contain several claims-related needs.</p></article>
+          <article><span>01</span><h3>Intent arrived unstructured</h3><p>One emotional account could contain several claims related needs.</p></article>
           <article><span>02</span><h3>Intake consumed attention</h3><p>Obvious, repetitive questions competed with active listening.</p></article>
           <article><span>03</span><h3>AI could overstep</h3><p>Silent automation risked incorrect assumptions and agent distrust.</p></article>
-          <article><span>04</span><h3>Patterns stayed call-sized</h3><p>Supervisors needed emerging issues across the operation, not one transcript.</p></article>
+          <article><span>04</span><h3>Patterns stayed call sized</h3><p>Supervisors needed emerging issues across the operation, not one transcript.</p></article>
         </div>
       </section>
 
@@ -130,12 +130,12 @@ export default function UDiscoverCaseStudy() {
           </div>
           <p>The same detection system assisted the agent inside the conversation and built an aggregate issue picture for the supervisor.</p>
         </div>
-        <div className="system-map" aria-label="U-Discover live-call intent system map">
+        <div className="system-map" aria-label="U Discover live call intent system map">
           <div className="system-node node-user"><span>01 · LISTEN</span><strong>Live customer conversation</strong><small>Speech, urgency, context, changing needs</small></div>
           <div className="system-link"><i /><span>understand</span></div>
           <div className="system-node"><span>02 · DETECT</span><strong>Intent + issue model</strong><small>Entities, claim stage, confidence, missing details</small></div>
           <div className="system-link"><i /><span>assist</span></div>
-          <div className="system-node"><span>03 · GUIDE</span><strong>Agent automation</strong><small>Prefill, obvious questions, next-best action</small></div>
+          <div className="system-node"><span>03 · GUIDE</span><strong>Agent automation</strong><small>Prefill, obvious questions, next best action</small></div>
           <div className="system-link"><i /><span>aggregate</span></div>
           <div className="system-node node-answer"><span>04 · LEARN</span><strong>Supervisor issue pulse</strong><small>Emerging intents, trends, exceptions, evidence</small></div>
           <div className="system-foundation">
@@ -151,7 +151,7 @@ export default function UDiscoverCaseStudy() {
           <h2>One live call.<br /><em>Five coordinated layers.</em></h2>
         </div>
         <div className="blueprint-wrap">
-          <div className="blueprint" role="table" aria-label="U-Discover service blueprint">
+          <div className="blueprint" role="table" aria-label="U Discover service blueprint">
             <div className="blueprint-header" role="row">
               <span role="columnheader">Layer</span><span role="columnheader">Listen</span><span role="columnheader">Detect</span><span role="columnheader">Assist</span><span role="columnheader">Learn</span>
             </div>
@@ -172,13 +172,13 @@ export default function UDiscoverCaseStudy() {
             <p className="case-index">06 · Product decisions</p>
             <h2>Automation stayed<br /><em>under human control.</em></h2>
           </div>
-          <p>Three decisions kept AI useful on a high-stakes live call without turning the agent into a passenger.</p>
+          <p>Three decisions kept AI useful on a critical live call without turning the agent into a passenger.</p>
         </div>
         <div className="decision-grid">
           <article className="decision-card">
             <div className="question-ladder" aria-hidden="true"><span>Customer language</span><i /><span>Detected intent · 91%</span><i /><strong>Agent confirms</strong></div>
             <p className="decision-number">01 · DURING DETECTION</p>
-            <h3>Detect—do not hijack</h3>
+            <h3>Detect, do not hijack</h3>
             <p>Show the inferred intent, confidence, and correction path so the agent always owns the decision.</p>
           </article>
           <article className="decision-card">
@@ -208,7 +208,7 @@ export default function UDiscoverCaseStudy() {
         <div className="outcome-intro">
           <p className="case-index">08 · Outcome</p>
           <h2>Trust was proven<br /><em>when the stakes were real.</em></h2>
-          <p>The strongest validation was enterprise commitment to a product that made live-call AI useful to frontline agents and operational issue discovery visible to supervisors during a nationally recognized catastrophe response.</p>
+          <p>The strongest validation was enterprise commitment to a product that made live call AI useful to frontline agents and operational issue discovery visible to supervisors during a nationally recognized catastrophe response.</p>
         </div>
         <div className="outcome-ledger">
           <div><strong>$2.2M</strong><span>enterprise adoption secured</span></div>
@@ -217,7 +217,7 @@ export default function UDiscoverCaseStudy() {
         </div>
         <div className="role-strip">
           <span>My contribution</span>
-          <p>UX research · problem framing · experience strategy · information architecture · conversational UX · interaction design · cross-functional alignment</p>
+          <p>UX research · problem framing · experience strategy · information architecture · conversational UX · interaction design · collaborative alignment</p>
         </div>
       </section>
 

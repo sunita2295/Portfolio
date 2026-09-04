@@ -6,7 +6,7 @@ const projects = [
   {
     numeral: "I",
     realm: "AI · CONVERSATION INTELLIGENCE",
-    title: "U-Discover",
+    title: "U Discover",
     problem: "Thousands of conversations. No fast path to a trusted answer.",
     solution: "Led a GenAI discovery experience from research to release.",
     proof: "Farmers Insurance · 3,000 agents",
@@ -19,8 +19,8 @@ const projects = [
     numeral: "II",
     realm: "B2B · DIGITAL COMMERCE",
     title: "Redington Online",
-    problem: "Four disconnected partner journeys across a high-stakes B2B platform.",
-    solution: "Leading one research-led system from discovery through checkout.",
+    problem: "Four disconnected partner journeys across a critical B2B platform.",
+    solution: "Leading one research informed system from discovery through checkout.",
     proof: "Transformation in progress",
     outcome: "4",
     outcomeLabel: "critical journeys connected",
@@ -31,7 +31,7 @@ const projects = [
     numeral: "III",
     realm: "AI · WORKFLOW AUTOMATION",
     title: "Automation Systems",
-    problem: "One-off AI workflows slowed every release.",
+    problem: "Isolated AI workflows slowed every release.",
     solution: "Built reusable patterns across three AI product suites.",
     proof: "+35% retention · +37% conversion · 38% lower churn",
     outcome: "60%",
@@ -42,12 +42,12 @@ const projects = [
 ];
 
 const experience = [
-  ["Now", "Redington", "UX/UI Designer · Manager Level", "B2B commerce, AI-assisted experiences"],
-  ["2023—26", "Uniphore", "Product Designer", "AI, GenAI, conversational intelligence"],
-  ["2022—23", "Drishti", "UX Designer", "Video analytics, operator workflows"],
+  ["Now", "Redington", "UX/UI Designer · Manager Level", "B2B commerce, AI enabled experiences"],
+  ["2023 to 2026", "Uniphore", "Product Designer", "AI, GenAI, conversational intelligence"],
+  ["2022 to 2023", "Drishti", "UX Designer", "Video analytics, operator workflows"],
   ["2022", "Riskcovry", "UX/UI Designer", "Insurance journeys, service design"],
   ["2021", "Blowhorn", "UX/UI Designer", "Logistics, WMS, public systems"],
-  ["2019—21", "Digit9", "UX Designer", "Enterprise dashboards, monitoring"],
+  ["2019 to 2021", "Digit9", "UX Designer", "Enterprise dashboards, monitoring"],
 ];
 
 export default function Portfolio() {
@@ -116,7 +116,7 @@ export default function Portfolio() {
           <p className="eyebrow">Product designer · AI, SaaS &amp; B2B commerce</p>
           <h1>Sunita<br /><em>Rout</em></h1>
           <p className="hero-deck">
-            I find where complex products lose people, redesign the system—not just the screen—and prove the difference in adoption, speed, conversion, and retention.
+            I find where complex products lose people, redesign the system, not just the screen, and prove the difference in adoption, speed, conversion, and retention.
           </p>
           <div className="hero-actions">
             <a className="text-link" href="#work">Enter the work <span>↓</span></a>
@@ -130,7 +130,7 @@ export default function Portfolio() {
       </section>
 
       <section className="signal-strip" aria-label="Career highlights">
-        <p><strong>Research-led decisions</strong><span>✦</span><strong>Outcomes over theatre</strong></p>
+        <p><strong>Research led decisions</strong><span>✦</span><strong>Outcomes over theatre</strong></p>
         <div className="signals">
           <div><strong>$2.2M</strong><span>enterprise adoption</span></div>
           <div><strong>50%</strong><span>higher adoption</span></div>
@@ -194,7 +194,7 @@ export default function Portfolio() {
           </figure>
           <div className="about-copy">
             <p className="eyebrow">Research · systems · outcomes</p>
-            <p className="pull-quote">I turn ambiguity into product decisions teams can ship—and outcomes leaders can measure.</p>
+            <p className="pull-quote">I turn ambiguity into product decisions teams can ship and outcomes leaders can measure.</p>
             <p className="about-intro">Research shows me where the system breaks. Product strategy decides what matters. Interaction design makes the fix clear, scalable, and usable.</p>
             <div className="about-facts" aria-label="Design practice at a glance">
               <div><strong>6+</strong><span>years shaping complex products</span></div>
@@ -208,7 +208,7 @@ export default function Portfolio() {
           </div>
           <aside className="lore-strip">
             <span>Fun fact · lifelong dragon fan</span>
-            <p>The realm is personal. I art-directed and built this theme from a blank canvas with AI as my creative making tool.</p>
+            <p>The realm is personal. I conceived and built this theme from a blank canvas with AI as my creative making tool.</p>
           </aside>
         </div>
       </section>

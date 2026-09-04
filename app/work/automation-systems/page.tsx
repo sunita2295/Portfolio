@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CaseHeader, CaseNext, AutomationConceptScreen } from "../case-components";
 
 export const metadata: Metadata = {
-  title: "Automation Systems Case Study — Sunita Rout",
+  title: "Automation Systems Case Study | Sunita Rout",
   description: "How Sunita Rout designed reusable AI workflow systems across three product suites, accelerating rollouts by 60%.",
 };
 
@@ -22,9 +22,9 @@ export default function AutomationSystemsCaseStudy() {
         <div className="case-hero-grid" aria-hidden="true" />
         <div className="automation-constellation" aria-hidden="true"><span /><span /><span /><span /><span /><i /><i /><i /></div>
         <div className="case-hero-copy">
-          <p className="case-kicker">Automation Systems · AI workflow architecture · 2023—2026</p>
+          <p className="case-kicker">Automation Systems · AI workflow architecture · 2023 to 2026</p>
           <h1>Stop designing every AI workflow<br /><em>as if it were the first.</em></h1>
-          <p className="case-lede">I turned one-off automation flows into a reusable product language across U-Suite, X-Suite, and Model Space—so teams could configure, ship, and scale with less reinvention.</p>
+          <p className="case-lede">I turned isolated automation flows into a reusable product language across U Suite, X Suite, and Model Space, so teams could configure, ship, and scale with less reinvention.</p>
         </div>
         <div className="case-hero-proof">
           <div><strong>60%</strong><span>faster rollout cycles</span></div>
@@ -41,15 +41,15 @@ export default function AutomationSystemsCaseStudy() {
         </div>
         <div className="problem-layout">
           <div className="problem-copy">
-            <p>AI workflows were being solved as individual feature requests. Teams repeatedly redesigned triggers, configuration, validation, deployment, and recovery—even when the underlying decisions were the same.</p>
+            <p>AI workflows were being solved as individual feature requests. Teams repeatedly redesigned triggers, configuration, validation, deployment, and recovery, even when the underlying decisions were the same.</p>
             <p>The product problem was not a shortage of screens. It was the absence of a shared grammar for how automation should behave across products.</p>
             <blockquote>“Scale arrived when we separated what must stay consistent from what each product must configure.”</blockquote>
           </div>
-          <div className="drag-model" aria-label="Cost of one-off workflows">
-            <div className="drag-input"><span>U-Suite</span><span>X-Suite</span><span>Model Space</span></div>
+          <div className="drag-model" aria-label="Cost of isolated workflows">
+            <div className="drag-input"><span>U Suite</span><span>X Suite</span><span>Model Space</span></div>
             <div className="drag-chaos"><i>Trigger</i><i>Rules</i><i>Test</i><i>Deploy</i><i>Errors</i><i>Status</i></div>
             <div className="drag-cost"><span>REDESIGN</span><span>REBUILD</span><span>RELEARN</span></div>
-            <strong>One-off UX created compound delivery cost.</strong>
+            <strong>Isolated UX created compound delivery cost.</strong>
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function AutomationSystemsCaseStudy() {
             <p className="case-index">02 · Pattern architecture</p>
             <h2>A shared grammar for<br /><em>human + AI work.</em></h2>
           </div>
-          <p>The system organizes automation around stable decisions—not product-specific page layouts.</p>
+          <p>The system organizes automation around stable decisions, not product specific page layouts.</p>
         </div>
         <div className="pattern-grammar" aria-label="Reusable automation pattern grammar">
           <div className="grammar-spine"><span>Workflow intent</span><i /><span>Configuration</span><i /><span>Execution</span><i /><span>Recovery</span></div>
@@ -89,7 +89,7 @@ export default function AutomationSystemsCaseStudy() {
           ))}
         </div>
         <div className="failure-loop">
-          <span>Failure is a first-class state</span>
+          <span>Failure is a primary state</span>
           <div><i>Detect</i><b>→</b><i>Explain</i><b>→</b><i>Recover</i><b>→</b><i>Learn</i></div>
           <p>Every automation pattern included a route back to human understanding and control.</p>
         </div>
@@ -104,7 +104,7 @@ export default function AutomationSystemsCaseStudy() {
           <p>A shared core reduced repeated design and engineering effort while leaving each suite room for its own context.</p>
         </div>
         <div className="reuse-matrix" role="table" aria-label="Reusable automation patterns across three product suites">
-          <div className="reuse-row reuse-head" role="row"><strong role="columnheader">Pattern</strong><span role="columnheader">U-Suite</span><span role="columnheader">X-Suite</span><span role="columnheader">Model Space</span><i role="columnheader">System value</i></div>
+          <div className="reuse-row reuse-head" role="row"><strong role="columnheader">Pattern</strong><span role="columnheader">U Suite</span><span role="columnheader">X Suite</span><span role="columnheader">Model Space</span><i role="columnheader">System value</i></div>
           {[
             ["Trigger builder","●","●","●","One interaction model"],
             ["Rule logic","●","●","●","Predictable configuration"],
@@ -113,13 +113,13 @@ export default function AutomationSystemsCaseStudy() {
             ["Monitoring + recovery","●","●","●","Shared operational language"],
           ].map(row => <div className="reuse-row" role="row" key={row[0]}><strong role="rowheader">{row[0]}</strong><span role="cell">{row[1]}</span><span role="cell">{row[2]}</span><span role="cell">{row[3]}</span><i role="cell">{row[4]}</i></div>)}
         </div>
-        <div className="matrix-key"><span>● Shared core</span><span>○ Context-specific variation</span></div>
+        <div className="matrix-key"><span>● Shared core</span><span>○ Contextual variation</span></div>
       </section>
 
       <section className="case-section product-surface ash-surface" id="surface">
         <div className="case-section-head split-head">
           <div><p className="case-index">05 · Product surface</p><h2>Reusable logic.<br /><em>Inspectable execution.</em></h2></div>
-          <p>The concept screen demonstrates how a shared automation grammar can feel tangible, configurable, and safe—without recreating a proprietary product.</p>
+          <p>The concept screen demonstrates how a shared automation grammar can feel tangible, configurable, and safe, without recreating a proprietary product.</p>
         </div>
         <AutomationConceptScreen />
       </section>
@@ -134,9 +134,9 @@ export default function AutomationSystemsCaseStudy() {
           <div><strong>60%</strong><span>faster rollout cycles</span></div>
           <div><strong>+35%</strong><span>retention</span></div>
           <div><strong>+37%</strong><span>conversion</span></div>
-          <div><strong>−38%</strong><span>churn</span></div>
+          <div><strong>38%</strong><span>lower churn</span></div>
         </div>
-        <div className="role-strip"><span>My contribution</span><p>automation strategy · systems thinking · workflow architecture · reusable interaction patterns · conversational UX · cross-suite alignment · design mentorship</p></div>
+        <div className="role-strip"><span>My contribution</span><p>automation strategy · systems thinking · workflow architecture · reusable interaction patterns · conversational UX · portfolio alignment · design mentorship</p></div>
       </section>
 
       <CaseNext statement="The most valuable screen is often the one a team never has to redesign." nextHref="/#work" nextLabel="Return to selected work" />
