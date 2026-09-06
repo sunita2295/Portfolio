@@ -194,7 +194,7 @@ export default function Portfolio() {
           </figure>
           <div className="about-copy">
             <p className="eyebrow">Research · systems · outcomes</p>
-            <p className="pull-quote">I turn ambiguity into product decisions teams can ship and outcomes leaders can measure.</p>
+            <p className="pull-quote">I turn ambiguity into clear product direction that teams can execute and leaders can measure.</p>
             <p className="about-intro">Research shows me where the system breaks. Product strategy decides what matters. Interaction design makes the fix clear, scalable, and usable.</p>
             <div className="about-facts" aria-label="Design practice at a glance">
               <div><strong>6+</strong><span>years shaping complex products</span></div>
