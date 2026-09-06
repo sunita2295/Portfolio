@@ -236,12 +236,17 @@ export default function Portfolio() {
         <p className="eyebrow">What are you trying to move?</p>
         <h2><span>Bring me the business problem.</span><span>I’ll find <em>what the product must solve.</em></span></h2>
         <p>Especially when the workflow is complex, the stakes are high, and “make it simpler” is not enough of a brief.</p>
-        <a className="contact-button" href="mailto:rout.sunita2295@gmail.com">Talk through the problem <span>↗</span></a>
-        <div className="contact-meta">
-          <span>Bengaluru, India</span>
-          <a href="https://www.linkedin.com/in/sunita-rout/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="https://sunita.design" target="_blank" rel="noreferrer">Current portfolio ↗</a>
+        <div className="contact-actions">
+          <a className="contact-button" href="mailto:rout.sunita2295@gmail.com">Talk through the problem <span>↗</span></a>
+          <a className="linkedin-link" href="https://www.linkedin.com/in/sunita-rout/" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5.1 7.8H1.7V22h3.4V7.8ZM3.4 2A2.1 2.1 0 1 0 3.4 6.2 2.1 2.1 0 0 0 3.4 2ZM22.3 13.9c0-4.3-2.3-6.3-5.4-6.3a4.7 4.7 0 0 0-4.2 2.3V7.8H9.3V22h3.4v-7c0-1.9.4-3.7 2.8-3.7 2.3 0 2.4 2.2 2.4 3.8V22h3.4l1-8.1Z" />
+            </svg>
+            <span>Connect on LinkedIn</span>
+            <i aria-hidden="true">↗</i>
+          </a>
         </div>
+        <p className="contact-location">Bengaluru, India</p>
       </section>
 
       <footer>
